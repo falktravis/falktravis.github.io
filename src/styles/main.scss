@@ -1,0 +1,25 @@
+$background1: #222831;
+$background2: #393E46;
+$primary: #EEEEEE;
+$primary2: #C4C4C4;
+$highlight: #bb00e3;
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: $primary;
+  background-color: $background1;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
