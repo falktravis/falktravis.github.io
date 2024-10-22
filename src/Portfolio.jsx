@@ -7,6 +7,9 @@ import memorialImg from '../public/images/memorial.jpg'
 
 import githubImge from '../public/images/github.svg'
 import spatulaGif from '../public/images/spatula.gif'
+import spatulaWebsiteImg from '../public/images/swebsite.png'
+
+import loonImg from '../public/images/loon.png'
 
 
 export default function Portfolio() {
@@ -52,16 +55,40 @@ export default function Portfolio() {
               </div>
             </div>
             <div className="spatulaWebsite">
-
+              <img src={spatulaWebsiteImg} alt="Spatula Software Website Hero Page" />
+              <div className="spatulaWebsiteContent">
+                <div className="titleContainer">
+                  <h3>Spatula Software Website</h3>
+                  <h4>Simple Web Development</h4>
+                </div>
+                <p>Designed and developed the front and backend of this website from scratch with React, Node JS, Express and SCSS. This website was designed to be simple and easy to navigate, with a focus on the product. You could login to a customer portal using different authentication providers, where you would be able to view and manage your current plan.</p>
+                <div className="buttonContainer">
+                  <a className='github' href="https://google.com"><img src={githubImge} alt="GitHub" />Repository</a>
+                </div>
+              </div>
             </div>
             <div className="loonLookout">
-
+              <img src={loonImg} alt="Loon Lookout Website" />
+              <div className="loonLookoutContent">
+                <div className="titleContainer">
+                  <h3>Loon Lookout Website</h3>
+                  <h4>Web Dev Commission</h4>
+                </div>
+                <p>I was commissioned to make this simple website for a rental property. The development was rather easy, but this was the first time I really had to communicate with a customer and create something to fix someone elses problem. The real challenge with this was breaking into the world of customer conversations.</p>
+                <div className="buttonContainer">
+                  <a className='github' href="https://google.com"><img src={githubImge} alt="GitHub" />Repository</a>
+                </div>
+              </div>
             </div>
             <div className="fragment">
-
-            </div>
-            <div className="falkWebDesign">
-
+              <div className="titleContainer">
+                <h3>Fragment Scraper</h3>
+                <h4>Web Scraping Commission</h4>
+              </div>
+              <p>Upon the development of Spatula Software, I was becoming a somewhat notable figure for web scraping in online communities. This was one of a couple commissions for someone who had reached out. It would scrape fragment.com for valuable usernames and notify the customer if it detected any. Taking less than a day to complete.</p>
+              <div className="buttonContainer">
+                <a className='github' href="https://google.com"><img src={githubImge} alt="GitHub" />Repository</a>
+              </div>
             </div>
         </div>
       );
@@ -85,7 +112,7 @@ export default function Portfolio() {
             <h2>Spatula Software</h2>
             <div className="experienceInfo">
               <p>Sole Proprietorship</p>
-              <p>November 2023 - March 2024</p>
+              <p>February 2023 - March 2024</p>
             </div>
             <p>Small, software as a service company that helped the flipping community and used car/machinery dealerships to find products on Facebook Marketplace. This was a great experience to get my foot in the product world. I have since shut it down due to the small scale and certain legal liabilities.</p>
             <h3>Achievements</h3>
@@ -94,6 +121,20 @@ export default function Portfolio() {
               <li>Built the customer interaction backend</li>
               <li>Built a Front, and Back-end website to facilitate customers</li>
               <li>Ran customer conversations and product discovery</li>
+            </ul>
+          </div>
+          <div className="webDesign">
+            <h2>Falk Web Design</h2>
+            <div className="experienceInfo">
+              <p>Sole Proprietorship</p>
+              <p>August 2022 - February 2023</p>
+            </div>
+            <p>The first time I tried to turn my coding work into a business. I successfully contracted one website, paying around $250, with another contract in the works, before realizing this was just a job, and finding my next big idea.</p>
+            <h3>Achievements</h3>
+            <ul>
+              <li>Taught myself web design and development technologies</li>
+              <li>Learned to talk with customers and understand them on a basic level</li>
+              <li>Used guerilla marking to attract customers</li>
             </ul>
           </div>
         </div>
