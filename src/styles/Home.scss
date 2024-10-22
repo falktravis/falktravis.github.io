@@ -2,7 +2,7 @@
 
 .hero{
     width: 100%;
-    height: calc(100vh - 90px);
+    height: calc(100vh - 100px);
     
     .heroText{
         width: 100%;
@@ -13,13 +13,15 @@
             position: absolute;
             top: 20%;
             left: 30%;
-            width: 50%;
-            font-size: calc(60px + 0.390625vw);
+            width: 0;
+            font-size: calc(75px + 0.390625vw);
             font-family: inter, sans-serif;
             color: $primary;
             margin-bottom: 10px;
             font-weight: 700;
             text-align: left;
+            overflow: visible;
+            white-space: nowrap;
 
             span{
                 color: $highlight;

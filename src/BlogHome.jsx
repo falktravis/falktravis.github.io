@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import './styles/BlogHome.scss'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import matter from 'gray-matter'; // Import gray-matter here
 
 const categoryClick = (category) => {
@@ -8,17 +8,21 @@ const categoryClick = (category) => {
 }
 
 export default function BlogHome() {
+  const location = useLocation(); // Access the current URL
   const [posts, setPosts] = useState({});
   const [loading, setLoading] = useState(true); // Add loading state
+  const [isList, setIsList] = useState(true);
+  const [subPage, setSubPage] = useState(null);
+  const [postName, setPostName] = useState(null);
 
   const secondaryPost = (category, slug) => {
     const post = posts[category][slug];
     return (
-      <Link className="secondaryPost" to={`/posts/${category}/${slug}`}>
+      <Link className="secondaryPost" to={`/blog/${category}/${slug}`}>
         <h3>{post.title}</h3>
         <div className="subheading">
-          <p>{post.category}</p>
-          <p>{post.date}</p>
+          <p id='category'>{post.category}</p>
+          <p id='date'>{post.date}</p>
         </div>
         <p>{post.description}</p>
       </Link>
@@ -28,13 +32,13 @@ export default function BlogHome() {
   const highlightPost = (category, slug) => {
     const post = posts[category][slug];
     return (
-      <Link className="highlightPost" to={`/posts/${category}/${slug}`}>
+      <Link className="highlightPost" to={`/blog/${category}/${slug}`}>
         <img src={post.image} alt={post.alt} />
         <div className="text">
           <h3>{post.title}</h3>
           <div className="subheading">
-            <p>{post.category}</p>
-            <p>{post.date}</p>
+            <p id='category'>{post.category}</p>
+            <p id='date'>{post.date}</p>
           </div>
           <p>{post.description}</p>
         </div>
@@ -45,7 +49,7 @@ export default function BlogHome() {
   useEffect(() => {
     const importAllPosts = async () => {
       // Import all markdown files from the specified directory
-      const postModules = import.meta.glob('../public/posts/**/*.md');
+      const postModules = import.meta.glob('../public/blog/**/*.md');
       const postList = {};
 
       for (const path in postModules) {
@@ -67,12 +71,22 @@ export default function BlogHome() {
       }
 
       // Set the state with the list of parsed posts
+      console.log(postList)
       setPosts(postList);
       setLoading(false);
     };
 
     importAllPosts();
   }, []);
+
+  useEffect(() => {
+    const pathSegments = location.pathname.split('/');
+    if (pathSegments[2]) {
+      setSubPage(pathSegments[2]);
+    }else{
+      setSubPage(null);
+    }
+  }, [location]);
 
   if(loading){
     return <div>Loading...</div>
@@ -81,58 +95,89 @@ export default function BlogHome() {
   return (
     <>
         <main>
-            <div className="searchContainer">
+            <div className="head">
+              <div className="searchContainer">
                 <input type="text" placeholder="Search..." />
+              </div>
+              <div className="path">
+                  <Link to='/blog'>Home</Link>
+                  {subPage != null ? (
+                      <>
+                        <p> &#62; </p>
+                        <Link to={`/blog/${subPage}`}>{subPage.charAt(0).toUpperCase() + subPage.slice(1)}</Link>
+                        {postName != null ? (
+                            <>
+                              <p> &#62; </p>
+                              <p>{postName}</p>
+                            </>
+                          ) : null
+                        }
+                      </>
+                    ) : null
+                  }
+              </div>
             </div>
             <div className="mainDisplay">
-              <div className="popularContainer">
-                <div className="header">
-                  <h2>Editors Choice</h2>
-                </div>
-                <div className="popularDisplay">
-                  {highlightPost("Books", "test")}
-                  <div className="secondaryPostsContainer">
-                      {secondaryPost("Books", "test")}
-                      {secondaryPost("Books", "test")}
-                      {secondaryPost("Books", "test")}
+              {subPage == null ? (
+                <div className="popularContainer">
+                  <div className="popularDisplay">
+                    {highlightPost("books", "test")}
+                    <div className="secondaryPostsContainer">
+                        {secondaryPost("books", "test")}
+                        {secondaryPost("books", "test")}
+                        {secondaryPost("books", "test")}
+                    </div>
                   </div>
                 </div>
-              </div>
+              ) : (
+                <div className="listings">
+                  <ul>
+                  {subPage == 'all' ? (Object.keys(posts).map((category) => (
+                    Object.keys(posts[category]).map((slug) => {
+                      const post = posts[category][slug];
+                      return (
+                          <li key={slug}>
+                            <Link to={`/blog/${category}/${slug}`}>
+                            <h3>{post.title}</h3>
+                            <div className="subheading">
+                              <p id='category'>{post.category}</p>
+                              <p id='date'>{post.date}</p>
+                            </div>
+                            <p>{post.description}</p>
+                            </Link>
+                          </li>
+                      );
+                    })
+                  ))) : (
+                    Object.keys(posts[subPage]).map((slug) => {
+                      const post = posts[subPage][slug];
+                      return (
+                        <li key={slug}>
+                          <Link to={`/blog/${subPage}/${slug}`}>
+                          <h3>{post.title}</h3>
+                          <div className="subheading">
+                            <p id='category'>{post.category}</p>
+                            <p id='date'>{post.date}</p>
+                          </div>
+                          <p>{post.description}</p>
+                          </Link>
+                        </li>
+                    )}))}
+                  </ul>
+                </div>
+              )}
               <div className="categories">
                 <div className="header">
                   <h2>Categories</h2>
                 </div>
                 <ul>
-                  <li><button onClick={categoryClick('devlogs')}>Devlogs</button></li>
-                  <li><button onClick={categoryClick('books')}>Books</button></li>
-                  <li><button onClick={categoryClick('productivity')}>Productivity</button></li>
-                  <li><button onClick={categoryClick('other')}>Other</button></li>
+                  <li><Link to='/blog/all'>All Posts</Link></li>
+                  <li><Link to='/blog/devlogs'>Devlogs</Link></li>
+                  <li><Link to='/blog/books'>Books</Link></li>
+                  <li><Link to='/blog/productivity'>Productivity</Link></li>
+                  <li><Link to='/blog/other'>Other</Link></li>
                 </ul>
               </div>
-            </div>
-            <div className="listings">
-              <div className="header">
-                <h2>All Posts</h2>
-              </div>
-              <ul>
-              {Object.keys(posts).map((category) => (
-                Object.keys(posts[category]).map((slug) => {
-                  const post = posts[category][slug];
-                  return (
-                      <li key={slug}>
-                        <Link to={`/posts/${category}/${slug}`}>
-                        <h3>{post.title}</h3>
-                        <div className="subheading">
-                          <p>{post.category}</p>
-                          <p>{post.date}</p>
-                        </div>
-                        <p>{post.description}</p>
-                        </Link>
-                      </li>
-                  );
-                })
-              ))}
-              </ul>
             </div>
         </main>
     </>

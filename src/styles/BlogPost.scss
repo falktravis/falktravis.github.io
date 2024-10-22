@@ -1,0 +1,136 @@
+@use 'main';
+
+.path{
+    text-align: left;
+    margin: auto;
+    margin-left: 27%;
+    margin-top: 2vh;
+
+    a, p{
+        display: inline-block;
+        margin: 0 5px;
+    }
+
+    #category{
+        font-weight: 700;
+        color: main.$highlight;
+    }
+    
+    #date{
+        font-weight: 500;
+        color: main.$primary2;
+    }
+}
+
+.contentContainer{
+    width: 100%;
+    display: flex;
+
+    .content{
+        width: 50%;
+        margin-left: 25%;
+
+        img{
+            width: 100%;
+            margin: 3vh 0;
+            border-radius: 15px;
+        }
+
+        .title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            h1{
+                width: 60%;
+                margin: 2vh 5%;
+                text-align: left;
+            }
+            
+            .author{
+                width: 40%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 2vh 0;
+    
+                img{
+                    width: 18%;
+                    margin: auto;
+                    margin-right: 3%;
+                }
+    
+                .subheader{
+                    text-align: left;
+    
+                    h2{
+                        font-size: calc(14px + 0.390625vw);
+                        font-family: inter, sans-serif;
+                    }
+        
+                    p{
+                        font-size: calc(6px + 0.390625vw);
+                        font-family: inter, sans-serif;
+                        color: main.$primary2;
+                    }
+                }
+            }
+        }
+
+        #description{
+            color: main.$primary2;
+        }
+
+        .markdown-content{
+            width: 90%;
+            margin: 2vh 5%;
+
+            p{
+                text-align: left;
+            }
+        }
+    }
+
+    .info{
+        width: 22%;
+        margin-left: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        .toc{
+            top: calc(8vh + 70px);
+            position: sticky;
+    
+            ul{
+                list-style: none;
+                font-family: Montserrat, sans-serif;
+                text-align: left;
+                
+    
+                li{
+                    
+    
+                    a{
+                        color: main.$primary2;
+    
+                        &:hover{
+                            color: main.$primary;
+                        }
+                    }
+                }
+    
+                #level2{
+                    font-size: calc(16px + 0.390625vw);
+                }
+    
+                #level3{
+                    font-size: calc(10px + 0.390625vw);
+                    margin-left: 10px;
+                }
+            }
+    
+        }
+    }
+}
