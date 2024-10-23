@@ -28,7 +28,7 @@ export default function Portfolio() {
               <p>Named after the second of Hercules' impossible labors due to its 7 headed loss function, this Natural Language Understanding model is perhaps my greatest feat. It can perform joint classification of intents and slots, with six slot classifications for each token. Equipped with a three sentence memory and a near infinite reservoir of randomly generated synthetic data, Hydra is a force to be reckoned with.</p>
               <div className="buttonContainer">
                 <p>Public Inference Coming Soon...</p>
-                <a className='github' href="https://google.com"><img src={githubImge} alt="GitHub" />Repository</a>
+                <a className='github' target='_blank' href="https://github.com/FalsettoAI/Hydra"><img src={githubImge} alt="GitHub" />Repository</a>
               </div>
             </div>
             <div className="pSpatula">
@@ -40,7 +40,7 @@ export default function Portfolio() {
                 </div>
                 <p>Spatula Software is a complex application using Node JS, Puppeteer, and MongoDB to scape, store, and serve web data. This application navigated the most advanced website in the world, finding and parsing valuable data based on user requests. Not only could it scrape data, but also manipulate browsers to send generic Facebook messages for you, although that feature was never opened to users. <br /><br /> Check out this blog post, or the experiences tab for more information.</p>
                 <div className="buttonContainer">
-                  <a className='github' href="https://google.com"><img src={githubImge} alt="GitHub" />Repository</a>
+                  <a className='github' target='_blank' href="https://github.com/falktravis/Spatula-Software"><img src={githubImge} alt="GitHub" />Repository</a>
                 </div>
               </div>
             </div>
@@ -51,7 +51,7 @@ export default function Portfolio() {
               </div>
               <p>I designed and then developed this entire website from scratch with React and SCSS. In fact, I built 98% of it in only three days, including full blog functionality and animations. Speed is key, over the years I have been experiencing with the fastest ways to build projects. Check out this blog post for the full story.</p>
               <div className="buttonContainer">
-                <a className='github' href="https://google.com"><img src={githubImge} alt="GitHub" />Repository</a>
+                <a className='github' target='_blank' href="https://github.com/falktravis/falktravis.github.io"><img src={githubImge} alt="GitHub" />Repository</a>
               </div>
             </div>
             <div className="spatulaWebsite">
@@ -63,7 +63,7 @@ export default function Portfolio() {
                 </div>
                 <p>Designed and developed the front and backend of this website from scratch with React, Node JS, Express and SCSS. This website was designed to be simple and easy to navigate, with a focus on the product. You could login to a customer portal using different authentication providers, where you would be able to view and manage your current plan.</p>
                 <div className="buttonContainer">
-                  <a className='github' href="https://google.com"><img src={githubImge} alt="GitHub" />Repository</a>
+                  <a className='github' target='_blank' href="https://github.com/falktravis/Spatula-Software-Website"><img src={githubImge} alt="GitHub" />Repository</a>
                 </div>
               </div>
             </div>
@@ -76,7 +76,7 @@ export default function Portfolio() {
                 </div>
                 <p>I was commissioned to make this simple website for a rental property. The development was rather easy, but this was the first time I really had to communicate with a customer and create something to fix someone elses problem. The real challenge with this was breaking into the world of customer conversations.</p>
                 <div className="buttonContainer">
-                  <a className='github' href="https://google.com"><img src={githubImge} alt="GitHub" />Repository</a>
+                  <a className='github' target='_blank' href="https://github.com/falktravis/Loon-Lookout-Gatsby"><img src={githubImge} alt="GitHub" />Repository</a>
                 </div>
               </div>
             </div>
@@ -87,7 +87,17 @@ export default function Portfolio() {
               </div>
               <p>Upon the development of Spatula Software, I was becoming a somewhat notable figure for web scraping in online communities. This was one of a couple commissions for someone who had reached out. It would scrape fragment.com for valuable usernames and notify the customer if it detected any. Taking less than a day to complete.</p>
               <div className="buttonContainer">
-                <a className='github' href="https://google.com"><img src={githubImge} alt="GitHub" />Repository</a>
+                <a className='github' target='_blank' href="https://github.com/falktravis/Fragment"><img src={githubImge} alt="GitHub" />Repository</a>
+              </div>
+            </div>
+            <div className="webpack">
+              <div className="titleContainer">
+                <h3>Webpack Starter</h3>
+                <h4>Community Boiler Plate</h4>
+              </div>
+              <p>When I started creating websites with react, solutions like Vite were far less popular. This was very annoying for me because create-react-app was a terrible solution. I created this Webpack starter file as a boiler plate for new websites. Although I never tried to push it into the community, I used this religiously throughout my web development journey.</p>
+              <div className="buttonContainer">
+                <a className='github' target='_blank' href="https://github.com/falktravis/WebpackStarter"><img src={githubImge} alt="GitHub" />Repository</a>
               </div>
             </div>
         </div>
