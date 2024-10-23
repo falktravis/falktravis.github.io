@@ -10,10 +10,10 @@ const categoryClick = (category) => {
 export default function BlogHome() {
   const location = useLocation(); // Access the current URL
   const [posts, setPosts] = useState({});
+  const [listedPosts, setListedPosts] = useState({});
   const [loading, setLoading] = useState(true); // Add loading state
-  const [isList, setIsList] = useState(true);
   const [subPage, setSubPage] = useState(null);
-  const [postName, setPostName] = useState(null);
+  const [searchTerm, setSearchTerm] = useState('');
 
   const secondaryPost = (category, slug, className) => {
     const post = posts[category][slug];
@@ -73,6 +73,7 @@ export default function BlogHome() {
       // Set the state with the list of parsed posts
       console.log(postList)
       setPosts(postList);
+      setListedPosts(postList);
       setLoading(false);
     };
 
@@ -83,11 +84,44 @@ export default function BlogHome() {
     const pathSegments = location.pathname.split('/');
     if (pathSegments[2]) {
       setSubPage(pathSegments[2]);
+      if (pathSegments[2] === 'all') {
+        setListedPosts(posts);
+      } else {
+        setListedPosts({[pathSegments[2]]: posts[pathSegments[2]]});
+        console.log(listedPosts)
+      }
     }else{
+      setListedPosts(posts);
       setSubPage(null);
     }
   }, [location]);
+  
 
+  const searchChange = (e) => {
+    e.preventDefault();
+    setSearchTerm(e.target.value);
+
+    if (e.target.value === '') {
+      setListedPosts(posts);
+      setSubPage('all')
+    } else {
+      setSubPage('search')
+    }
+
+    const searchResults = {};
+    for (const category in posts) {
+      searchResults[category] = {};
+      for (const slug in posts[category]) {
+        const post = posts[category][slug];
+        if (post.title.toLowerCase().includes(e.target.value.toLowerCase()) || post.description.toLowerCase().includes(e.target.value.toLowerCase()) || post.category.toLowerCase().includes(e.target.value.toLowerCase()) || post.date.toLowerCase().includes(e.target.value.toLowerCase())) {
+          searchResults[category][slug] = post;
+        }
+      }
+    }
+
+    setListedPosts(searchResults);
+  }
+    
   if(loading){
     return <div>Loading...</div>
   }
@@ -97,7 +131,7 @@ export default function BlogHome() {
         <main>
             <div className="head">
               <div className="searchContainer">
-                <input type="text" placeholder="Search..." />
+                <input onChange={(e) => searchChange(e)} type="text" placeholder="Search..." />
               </div>
               <div className="path">
                   <Link to='/blog'>Home</Link>
@@ -105,13 +139,6 @@ export default function BlogHome() {
                       <>
                         <p> &#62; </p>
                         <Link to={`/blog/${subPage}`}>{subPage.charAt(0).toUpperCase() + subPage.slice(1)}</Link>
-                        {postName != null ? (
-                            <>
-                              <p> &#62; </p>
-                              <p>{postName}</p>
-                            </>
-                          ) : null
-                        }
                       </>
                     ) : null
                   }
@@ -130,9 +157,9 @@ export default function BlogHome() {
               ) : (
                 <div className="listings">
                   <ul>
-                  {subPage == 'all' ? (Object.keys(posts).map((category) => (
-                    Object.keys(posts[category]).map((slug) => {
-                      const post = posts[category][slug];
+                  {(Object.keys(listedPosts).map((category) => (
+                    Object.keys(listedPosts[category]).map((slug) => {
+                      const post = listedPosts[category][slug];
                       return (
                           <li key={slug}>
                             <Link to={`/blog/${category}/${slug}`}>
@@ -146,21 +173,7 @@ export default function BlogHome() {
                           </li>
                       );
                     })
-                  ))) : (
-                    Object.keys(posts[subPage]).map((slug) => {
-                      const post = posts[subPage][slug];
-                      return (
-                        <li key={slug}>
-                          <Link to={`/blog/${subPage}/${slug}`}>
-                          <h3>{post.title}</h3>
-                          <div className="subheading">
-                            <p id='category'>{post.category}</p>
-                            <p id='date'>{post.date}</p>
-                          </div>
-                          <p>{post.description}</p>
-                          </Link>
-                        </li>
-                    )}))}
+                  )))}
                   </ul>
                 </div>
               )}
