@@ -15,10 +15,10 @@ export default function BlogHome() {
   const [subPage, setSubPage] = useState(null);
   const [postName, setPostName] = useState(null);
 
-  const secondaryPost = (category, slug) => {
+  const secondaryPost = (category, slug, className) => {
     const post = posts[category][slug];
     return (
-      <Link className="secondaryPost" to={`/blog/${category}/${slug}`}>
+      <Link className={`secondaryPost ${className}`} to={`/blog/${category}/${slug}`}>
         <h3>{post.title}</h3>
         <div className="subheading">
           <p id='category'>{post.category}</p>
@@ -122,11 +122,9 @@ export default function BlogHome() {
                 <div className="popularContainer">
                   <div className="popularDisplay">
                     {highlightPost("books", "test")}
-                    <div className="secondaryPostsContainer">
-                        {secondaryPost("books", "test")}
-                        {secondaryPost("books", "test")}
-                        {secondaryPost("books", "test")}
-                    </div>
+                    {secondaryPost("books", "test", '')}
+                    {secondaryPost("books", "test", '')}
+                    {secondaryPost("books", "test", "final")}
                   </div>
                 </div>
               ) : (

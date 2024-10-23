@@ -6,6 +6,10 @@
     margin-left: 27%;
     margin-top: 2vh;
 
+    @media (max-width: 1000px) {
+        margin-left: 5%;
+    }
+
     a, p{
         display: inline-block;
         margin: 0 5px;
@@ -30,6 +34,15 @@
         width: 50%;
         margin-left: 25%;
 
+        @media (max-width: 1000px) {
+            width: 80%;
+            margin-left: 5%;
+        }
+        @media (max-width: 768px) {
+            width: 95%;
+            margin-left: 2.5%;
+        }
+
         img{
             width: 100%;
             margin: 3vh 0;
@@ -46,6 +59,13 @@
                 width: 60%;
                 margin: 2vh 5%;
                 text-align: left;
+
+                @media (max-width: 768px) {
+                    font-size: calc(24px + 0.390625vw);
+                }
+                @media (max-width: 600px) {
+                    font-size: calc(16px + 0.390625vw);
+                }
             }
             
             .author{
@@ -59,6 +79,13 @@
                     width: 18%;
                     margin: auto;
                     margin-right: 3%;
+
+                    @media (max-width: 768px) {
+                        width: 22%;
+                    }
+                    @media (max-width: 600px) {
+                        width: 28%;
+                    }
                 }
     
                 .subheader{
@@ -73,6 +100,17 @@
                         font-size: calc(6px + 0.390625vw);
                         font-family: inter, sans-serif;
                         color: main.$primary2;
+                    }
+
+                    @media (max-width: 768px) {
+                        h2{
+                            font-size: calc(12px + 0.390625vw);
+                        }
+                    }
+                    @media (max-width: 600px) {
+                        h2{
+                            font-size: calc(10px + 0.390625vw);
+                        }
                     }
                 }
             }
@@ -98,6 +136,12 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        @media (max-width: 768px) {
+            width: 0;
+            margin-left: 0;
+            display: none;
+        }
     
         .toc{
             top: calc(8vh + 70px);

@@ -58,7 +58,7 @@ export default function Portfolio() {
               <img src={spatulaWebsiteImg} alt="Spatula Software Website Hero Page" />
               <div className="spatulaWebsiteContent">
                 <div className="titleContainer">
-                  <h3>Spatula Software Website</h3>
+                  <h3>Software Website</h3>
                   <h4>Simple Web Development</h4>
                 </div>
                 <p>Designed and developed the front and backend of this website from scratch with React, Node JS, Express and SCSS. This website was designed to be simple and easy to navigate, with a focus on the product. You could login to a customer portal using different authentication providers, where you would be able to view and manage your current plan.</p>
@@ -71,7 +71,7 @@ export default function Portfolio() {
               <img src={loonImg} alt="Loon Lookout Website" />
               <div className="loonLookoutContent">
                 <div className="titleContainer">
-                  <h3>Loon Lookout Website</h3>
+                  <h3>Loon Lookout</h3>
                   <h4>Web Dev Commission</h4>
                 </div>
                 <p>I was commissioned to make this simple website for a rental property. The development was rather easy, but this was the first time I really had to communicate with a customer and create something to fix someone elses problem. The real challenge with this was breaking into the world of customer conversations.</p>
@@ -82,7 +82,7 @@ export default function Portfolio() {
             </div>
             <div className="fragment">
               <div className="titleContainer">
-                <h3>Fragment Scraper</h3>
+                <h3>Fragment</h3>
                 <h4>Web Scraping Commission</h4>
               </div>
               <p>Upon the development of Spatula Software, I was becoming a somewhat notable figure for web scraping in online communities. This was one of a couple commissions for someone who had reached out. It would scrape fragment.com for valuable usernames and notify the customer if it detected any. Taking less than a day to complete.</p>
