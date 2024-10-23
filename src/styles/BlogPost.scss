@@ -34,7 +34,7 @@
         width: 50%;
         margin-left: 25%;
 
-        @media (max-width: 1000px) {
+        @media (max-width: 1200px) {
             width: 80%;
             margin-left: 5%;
         }
@@ -59,6 +59,7 @@
                 width: 60%;
                 margin: 2vh 5%;
                 text-align: left;
+                font-size: calc(26px + 0.390625vw);
 
                 @media (max-width: 768px) {
                     font-size: calc(24px + 0.390625vw);
@@ -117,15 +118,32 @@
         }
 
         #description{
+            margin: 2vh 5%;
             color: main.$primary2;
+            font-size: calc(16px + 0.390625vw);
+            text-align: left;
+            text-indent: 3vw;
         }
 
         .markdown-content{
             width: 90%;
             margin: 2vh 5%;
 
+            h2{
+                padding: 5vh 0;
+                font-size: calc(24px + 0.390625vw);
+            }
+
+            h3{
+                padding: 3vh 0;
+                font-size: calc(20px + 0.390625vw);
+            }
+
             p{
+                font-size: calc(12px + 0.390625vw);
                 text-align: left;
+                padding: 2vh 0;
+                text-indent: 3vw;
             }
         }
     }

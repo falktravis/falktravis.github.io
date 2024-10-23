@@ -1,20 +1,20 @@
 import { useState, useEffect } from 'react'
 import './styles/Home.scss'
-import profileImg from '../public/images/profile.jpg'
+import profileImg from '/images/profile.jpg'
 import { Link } from 'react-router-dom'
 
 //tech stack logos
-import gastbyLogo from '../public/images/gatsbyLogo.svg'
-import gcpLogo from '../public/images/gcpLogo.svg'
-import JSLogo from '../public/images/JSLogo.svg'
-import kerasLogo from '../public/images/KerasLogo.svg'
-import mongoLogo from '../public/images/mongoDBLogo.svg'
-import nodeLogo from '../public/images/nodeJSLogo.svg'
-import puppeteerLogo from '../public/images/puppeteerLogo.svg'
-import pythonLogo from '../public/images/pythonLogo.png'
-import reactLogo from '../public/images/reactLogo.svg'
-import sassLogo from '../public/images/sassLogo.svg'
-import tensorflowLogo from '../public/images/TensorFlowLogo.svg'
+import gastbyLogo from '/images/gatsbyLogo.svg'
+import gcpLogo from '/images/gcpLogo.svg'
+import JSLogo from '/images/JSLogo.svg'
+import kerasLogo from '/images/KerasLogo.svg'
+import mongoLogo from '/images/mongoDBLogo.svg'
+import nodeLogo from '/images/nodeJSLogo.svg'
+import puppeteerLogo from '/images/puppeteerLogo.svg'
+import pythonLogo from '/images/pythonLogo.png'
+import reactLogo from '/images/reactLogo.svg'
+import sassLogo from '/images/sassLogo.svg'
+import tensorflowLogo from '/images/TensorFlowLogo.svg'
 const images = [gastbyLogo, gcpLogo, JSLogo, kerasLogo, mongoLogo, nodeLogo, puppeteerLogo, pythonLogo, reactLogo, sassLogo, tensorflowLogo];
 
 // swiper stuff
@@ -23,10 +23,10 @@ import "../node_modules/swiper/swiper-bundle.min.css";
 import { Autoplay } from 'swiper/modules';
 
 // social logos
-import githubLogo from '../public/images/githubLogo2.svg'
-import linkedinLogo from '../public/images/linkedinLogo.svg'
-import xLogo from '../public/images/xLogo.svg'
-import instagramLogo from '../public/images/instagramLogo.svg'
+import githubLogo from '/images/githubLogo2.svg'
+import linkedinLogo from '/images/linkedinLogo.svg'
+import xLogo from '/images/xLogo.svg'
+import instagramLogo from '/images/instagramLogo.svg'
 
 function generateRandomString(length) {
   const characters = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+}{][/<>';
@@ -186,7 +186,7 @@ export default function Home() {
             <div className="head">
               <h2>About Me</h2>
             </div>
-            <p>Nice to meet you! My name is Travis Falk. I am a 19 year old software developer&#40;among other things&#41; living in Boston. I have been passionate about building products and software development for years, starting my coding journey around 10 years old. This website is a collection of my previous experiences and projects, as well as my current interests and knowledge. Enjoy!</p>
+            <p>Nice to meet you! My name is Travis Falk. I am a 19 year old product/software developer&#40;among other things&#41; living in Boston. I have been passionate about building products and software development for years, starting my coding journey around 10 years old. This website is a collection of my previous experiences and projects, as well as my current interests and knowledge. Enjoy!</p>
           </div>
         </div>
         <div className="techStack">

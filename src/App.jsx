@@ -7,6 +7,10 @@ import BlogHome from './BlogHome'
 import Portfolio from './Portfolio'
 import BlogPost from './BlogPost'
 
+// Google Analytics
+import ReactGA from 'react-ga4';
+ReactGA.initialize('G-WTNW2PP5JK');
+
 function App() {
 
   return (

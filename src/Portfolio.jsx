@@ -1,15 +1,15 @@
 import { useState, useEffect } from 'react'
 import './styles/Portfolio.scss'
 
-import bostonImg from '../public/images/boston.jpg'
-import pompImg from '../public/images/pomp.jpg'
-import memorialImg from '../public/images/memorial.jpg'
+import bostonImg from '/images/boston.jpg'
+import pompImg from '/images/pomp.jpg'
+import memorialImg from '/images/memorial.jpg'
 
-import githubImge from '../public/images/github.svg'
-import spatulaGif from '../public/images/spatula.gif'
-import spatulaWebsiteImg from '../public/images/swebsite.png'
+import githubImge from '/images/github.svg'
+import spatulaGif from '/images/spatula.gif'
+import spatulaWebsiteImg from '/images/swebsite.png'
 
-import loonImg from '../public/images/loon.png'
+import loonImg from '/images/loon.png'
 
 
 export default function Portfolio() {

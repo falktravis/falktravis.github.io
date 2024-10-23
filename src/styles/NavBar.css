@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  overflow-x: hidden;
+  color-scheme: light dark;
+  color: #EEEEEE;
+  background-color: #222831;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.NavBar {
+  width: 70%;
+  padding: 0 15%;
+  margin: auto;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 200ms ease-in-out;
+}
+@media (max-width: 1200px) {
+  .NavBar {
+    width: 95%;
+    padding: 0 2.5%;
+  }
+}
+.NavBar h1 {
+  padding: 0 20px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: calc(25px + 0.390625vw);
+  font-family: "Rethink Sans", sans-serif;
+}
+@media (max-width: 600px) {
+  .NavBar h1 {
+    font-size: calc(15px + 0.390625vw);
+  }
+}
+.NavBar h1 a {
+  text-decoration: none;
+  color: #EEEEEE;
+}
+.NavBar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 35%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-weight: 500;
+  font-family: inter, sans-serif;
+  margin-right: 2%;
+}
+@media (max-width: 768px) {
+  .NavBar ul {
+    width: 50%;
+  }
+}
+@media (max-width: 600px) {
+  .NavBar ul {
+    width: 60%;
+  }
+}
+.NavBar ul li {
+  padding: 0 10px;
+  position: relative;
+}
+.NavBar ul li a {
+  text-decoration: none;
+  color: #EEEEEE;
+  font-size: calc(12px + 0.390625vw);
+}
+.NavBar ul li a::after {
+  content: "";
+  background: #bb00e3;
+  display: block;
+  height: 0.2vw;
+  width: calc(100% - 20px);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.2s ease-in-out;
+  position: absolute;
+  border-radius: 5px;
+  margin-top: 2px;
+}
+.NavBar ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.NavBar ul li a:hover {
+  cursor: pointer;
+}
+.NavBar ul li #contactButton {
+  display: block;
+  font-family: inter, sans-serif;
+  background-color: #bb00e3;
+  color: white;
+  border: none;
+  padding: 8px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: calc(10px + 0.390625vw);
+  font-weight: 500;
+  transition: 200ms ease-in-out;
+  box-shadow: rgba(185, 0, 227, 0.4274509804) 0px 0px 29px 10px;
+}
+.NavBar ul li #contactButton:hover {
+  transform: scale(1.05);
+  box-shadow: rgba(185, 0, 227, 0.7725490196) 0px 0px 29px 10px;
+}
+.NavBar ul li #contactButton::after {
+  height: 0;
+}
+@media (max-width: 600px) {
+  .NavBar ul li #contactButton {
+    padding: 8px 20px;
+  }
+}
+
+.hometrue {
+  height: 100px;
+  top: 0;
+  position: absolute;
+  z-index: 1;
+}/*# sourceMappingURL=NavBar.css.map */

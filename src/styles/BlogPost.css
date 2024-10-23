@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  overflow-x: hidden;
+  color-scheme: light dark;
+  color: #EEEEEE;
+  background-color: #222831;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.path {
+  text-align: left;
+  margin: auto;
+  margin-left: 27%;
+  margin-top: 2vh;
+}
+@media (max-width: 1000px) {
+  .path {
+    margin-left: 5%;
+  }
+}
+.path a, .path p {
+  display: inline-block;
+  margin: 0 5px;
+}
+.path #category {
+  font-weight: 700;
+  color: #bb00e3;
+}
+.path #date {
+  font-weight: 500;
+  color: #C4C4C4;
+}
+
+.contentContainer {
+  width: 100%;
+  display: flex;
+}
+.contentContainer .content {
+  width: 50%;
+  margin-left: 25%;
+}
+@media (max-width: 1200px) {
+  .contentContainer .content {
+    width: 80%;
+    margin-left: 5%;
+  }
+}
+@media (max-width: 768px) {
+  .contentContainer .content {
+    width: 95%;
+    margin-left: 2.5%;
+  }
+}
+.contentContainer .content img {
+  width: 100%;
+  margin: 3vh 0;
+  border-radius: 15px;
+}
+.contentContainer .content .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.contentContainer .content .title h1 {
+  width: 60%;
+  margin: 2vh 5%;
+  text-align: left;
+  font-size: calc(26px + 0.390625vw);
+}
+@media (max-width: 768px) {
+  .contentContainer .content .title h1 {
+    font-size: calc(24px + 0.390625vw);
+  }
+}
+@media (max-width: 600px) {
+  .contentContainer .content .title h1 {
+    font-size: calc(16px + 0.390625vw);
+  }
+}
+.contentContainer .content .title .author {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2vh 0;
+}
+.contentContainer .content .title .author img {
+  width: 18%;
+  margin: auto;
+  margin-right: 3%;
+}
+@media (max-width: 768px) {
+  .contentContainer .content .title .author img {
+    width: 22%;
+  }
+}
+@media (max-width: 600px) {
+  .contentContainer .content .title .author img {
+    width: 28%;
+  }
+}
+.contentContainer .content .title .author .subheader {
+  text-align: left;
+}
+.contentContainer .content .title .author .subheader h2 {
+  font-size: calc(14px + 0.390625vw);
+  font-family: inter, sans-serif;
+}
+.contentContainer .content .title .author .subheader p {
+  font-size: calc(6px + 0.390625vw);
+  font-family: inter, sans-serif;
+  color: #C4C4C4;
+}
+@media (max-width: 768px) {
+  .contentContainer .content .title .author .subheader h2 {
+    font-size: calc(12px + 0.390625vw);
+  }
+}
+@media (max-width: 600px) {
+  .contentContainer .content .title .author .subheader h2 {
+    font-size: calc(10px + 0.390625vw);
+  }
+}
+.contentContainer .content #description {
+  margin: 2vh 5%;
+  color: #C4C4C4;
+  font-size: calc(16px + 0.390625vw);
+  text-align: left;
+  text-indent: 3vw;
+}
+.contentContainer .content .markdown-content {
+  width: 90%;
+  margin: 2vh 5%;
+}
+.contentContainer .content .markdown-content h2 {
+  padding: 5vh 0;
+  font-size: calc(24px + 0.390625vw);
+}
+.contentContainer .content .markdown-content h3 {
+  padding: 3vh 0;
+  font-size: calc(20px + 0.390625vw);
+}
+.contentContainer .content .markdown-content p {
+  font-size: calc(12px + 0.390625vw);
+  text-align: left;
+  padding: 2vh 0;
+  text-indent: 3vw;
+}
+.contentContainer .info {
+  width: 22%;
+  margin-left: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .contentContainer .info {
+    width: 0;
+    margin-left: 0;
+    display: none;
+  }
+}
+.contentContainer .info .toc {
+  top: calc(8vh + 70px);
+  position: sticky;
+}
+.contentContainer .info .toc ul {
+  list-style: none;
+  font-family: Montserrat, sans-serif;
+  text-align: left;
+}
+.contentContainer .info .toc ul li a {
+  color: #C4C4C4;
+}
+.contentContainer .info .toc ul li a:hover {
+  color: #EEEEEE;
+}
+.contentContainer .info .toc ul #level2 {
+  font-size: calc(16px + 0.390625vw);
+}
+.contentContainer .info .toc ul #level3 {
+  font-size: calc(10px + 0.390625vw);
+  margin-left: 10px;
+}/*# sourceMappingURL=BlogPost.css.map */

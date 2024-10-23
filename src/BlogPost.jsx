@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link, useLocation } from 'react-router-dom';
 import matter from 'gray-matter';
 import { marked } from 'marked';
-import profilePic from '../public/images/FavIcon.png';
+import profilePic from '/images/FavIcon.png';
 import './styles/BlogPost.scss';
+import {Helmet} from "react-helmet";
 
 const BlogPost = () => {
   const location = useLocation(); // Access the current URL
@@ -11,7 +12,6 @@ const BlogPost = () => {
   const [content, setContent] = useState('');
   const [metadata, setMetadata] = useState({});
   const [subPage, setSubPage] = useState(null);
-  const [postName, setPostName] = useState(null);
   const [toc, setToc] = useState([]);
 
   useEffect(() => {
@@ -68,9 +68,6 @@ const BlogPost = () => {
     const pathSegments = location.pathname.split('/');
     if (pathSegments[2]) {
       setSubPage(pathSegments[2]);
-      if (pathSegments[3]) {
-        setPostName(pathSegments[3]);
-      }
     }else{
       setSubPage(null);
     }
@@ -78,19 +75,18 @@ const BlogPost = () => {
 
   return (
     <main>
+      <Helmet>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+      </Helmet>
       <div className="path">
         <Link to='/blog'>Home</Link>
         {subPage != null ? (
             <>
               <p> &#62; </p>
-              <Link to={`/blog/${subPage}`}>{subPage.charAt(0).toUpperCase() + subPage.slice(1)}</Link>
-              {postName != null ? (
-                  <>
-                    <p> &#62; </p>
-                    <p>{postName.charAt(0).toUpperCase() + postName.slice(1)}</p>
-                  </>
-                ) : null
-              }
+              <Link to={`/blog/${subPage}`}>{subPage}</Link>
+              <p> &#62; </p>
+              <p>{metadata.title}</p>
             </>
           ) : null
         }

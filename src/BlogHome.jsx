@@ -148,10 +148,10 @@ export default function BlogHome() {
               {subPage == null ? (
                 <div className="popularContainer">
                   <div className="popularDisplay">
-                    {highlightPost("books", "test")}
-                    {secondaryPost("books", "test", '')}
-                    {secondaryPost("books", "test", '')}
-                    {secondaryPost("books", "test", "final")}
+                    {highlightPost("books", "the-mom-test")}
+                    {secondaryPost("devlogs", "how-i-built-a-stunning-personal-website-in-3-days", '')}
+                    {secondaryPost("other", "test", '')}
+                    {secondaryPost("productivity", "test", "final")}
                   </div>
                 </div>
               ) : (
