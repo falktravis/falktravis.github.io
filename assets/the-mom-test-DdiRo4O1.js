@@ -1,1 +1,0 @@
-const e={title:"The Mom Test",date:"10/23/2024",timestamp:"2:17 PM",description:"The best book I've read all year. A must read for any entrepreneur, product manager, or innovator. At only 120 pages, this book is crammed full of information. Here's what you will learn... ",length:"3 min read",image:"/images/pen.jpg",alt:"The Mom Test"};export{e as attributes};
