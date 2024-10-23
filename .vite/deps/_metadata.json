@@ -1,0 +1,55 @@
+{
+  "hash": "34346745",
+  "configHash": "10db4de9",
+  "lockfileHash": "dd8f0d12",
+  "browserHash": "ca0b53b9",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "20b5277f",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "f1d54756",
+      "needsInterop": false
+    },
+    "gray-matter": {
+      "src": "../../node_modules/gray-matter/index.js",
+      "file": "gray-matter.js",
+      "fileHash": "edb86b3b",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "813e3217",
+      "needsInterop": true
+    },
+    "buffer": {
+      "src": "../../node_modules/buffer/index.js",
+      "file": "buffer.js",
+      "fileHash": "ad8404b4",
+      "needsInterop": true
+    },
+    "marked": {
+      "src": "../../node_modules/marked/lib/marked.esm.js",
+      "file": "marked.js",
+      "fileHash": "7e27047f",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-XWBPFPN7": {
+      "file": "chunk-XWBPFPN7.js"
+    },
+    "chunk-KOS6HUMP": {
+      "file": "chunk-KOS6HUMP.js"
+    },
+    "chunk-KEXKKQVW": {
+      "file": "chunk-KEXKKQVW.js"
+    }
+  }
+}

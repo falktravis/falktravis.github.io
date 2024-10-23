@@ -1,0 +1,1 @@
+const t={title:"Sample Blog Post",date:"2024/10/20",timestamp:"1:23 PM",description:"This is a sample blog post description",length:"3 min read",image:"/images/pen.jpg",alt:"Jetsteam EDGE Pen"};export{t as attributes};
