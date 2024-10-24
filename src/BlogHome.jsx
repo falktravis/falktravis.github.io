@@ -148,7 +148,7 @@ export default function BlogHome() {
                 <div className="popularContainer">
                   <div className="popularDisplay">
                     {highlightPost("books", "the-mom-test")}
-                    {secondaryPost("devlogs", "how-i-built-a-stunning-personal-website-in-3-days", '')}
+                    {secondaryPost("devlogs", "i-built-a-stunning-website-in-3-days", '')}
                     {secondaryPost("other", "test", '')}
                     {secondaryPost("productivity", "test", "final")}
                   </div>

@@ -136,14 +136,31 @@
 
             h3{
                 padding: 3vh 0;
-                font-size: calc(20px + 0.390625vw);
+                font-size: calc(16px + 0.390625vw);
             }
 
             p{
-                font-size: calc(12px + 0.390625vw);
+                font-size: calc(14px + 0.390625vw);
                 text-align: left;
                 padding: 2vh 0;
                 text-indent: 3vw;
+                color: #d7d7d7;
+            }
+
+            a{
+                color: #0098df;
+            }
+
+            blockquote{
+                font-size: calc(14px + 0.390625vw);
+                font-style: italic;
+                padding: 1vh 3vh;
+                text-align: left;
+                border-left: 2px solid main.$highlight;
+
+                p{
+                    text-indent: 0;
+                }
             }
         }
     }
@@ -154,6 +171,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: sticky;
+        top: calc(8vh + 70px);
 
         @media (max-width: 768px) {
             width: 0;
@@ -162,8 +181,6 @@
         }
     
         .toc{
-            top: calc(8vh + 70px);
-            position: sticky;
     
             ul{
                 list-style: none;
