@@ -6,6 +6,7 @@ description: "I built this personal website in 3 days, from scratch, using vite,
 length: "7 min read"
 image: "/images/themomtest.jpg"
 alt: "The Mom Test"
+
 ---
 
 # Header

@@ -1,11 +1,6 @@
 import { useState, useEffect } from 'react'
 import './styles/BlogHome.scss'
 import { Link, useLocation } from 'react-router-dom'
-import matter from 'gray-matter'; // Import gray-matter here
-
-const categoryClick = (category) => {
-  console.log(category);
-}
 
 export default function BlogHome() {
   const location = useLocation(); // Access the current URL
@@ -54,7 +49,6 @@ export default function BlogHome() {
 
       for (const path in postModules) {
         const post = await postModules[path]();
-        console.log(post)
         
         // Extract slug (filename without extension) and category from the path
         const slug = path.split('/').pop().replace('.md', '');
@@ -70,7 +64,6 @@ export default function BlogHome() {
       }
 
       // Set the state with the list of parsed posts
-      console.log(postList)
       setPosts(postList);
       setListedPosts(postList);
       setLoading(false);
@@ -87,13 +80,12 @@ export default function BlogHome() {
         setListedPosts(posts);
       } else {
         setListedPosts({[pathSegments[2]]: posts[pathSegments[2]]});
-        console.log(listedPosts)
       }
     }else{
       setListedPosts(posts);
       setSubPage(null);
     }
-  }, [location]);
+  }, [location, posts]);
   
 
   const searchChange = (e) => {
@@ -112,7 +104,7 @@ export default function BlogHome() {
       searchResults[category] = {};
       for (const slug in posts[category]) {
         const post = posts[category][slug];
-        if (post.title.toLowerCase().includes(e.target.value.toLowerCase()) || post.description.toLowerCase().includes(e.target.value.toLowerCase()) || post.category.toLowerCase().includes(e.target.value.toLowerCase()) || post.writedate.toLowerCase().includes(e.target.value.toLowerCase())) {
+        if (post.title.toLowerCase().includes(e.target.value.toLowerCase()) || post.description.toLowerCase().includes(e.target.value.toLowerCase()) || category.toLowerCase().includes(e.target.value.toLowerCase()) || post.writedate.toLowerCase().includes(e.target.value.toLowerCase())) {
           searchResults[category][slug] = post;
         }
       }
@@ -147,10 +139,10 @@ export default function BlogHome() {
               {subPage == null ? (
                 <div className="popularContainer">
                   <div className="popularDisplay">
-                    {highlightPost("books", "the-mom-test")}
-                    {secondaryPost("devlogs", "i-built-a-stunning-website-in-3-days", '')}
-                    {secondaryPost("other", "test", '')}
-                    {secondaryPost("productivity", "test", "final")}
+                    {highlightPost("productivity", "my-notebook-system")}
+                    {secondaryPost("productivity", "i-built-a-stunning-website-in-3-days", '')}
+                    {secondaryPost("other", "test", "final")}
+                    {secondaryPost("books", "the-mom-test", '')}
                   </div>
                 </div>
               ) : (

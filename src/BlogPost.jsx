@@ -26,7 +26,6 @@ const BlogPost = () => {
       }
     
       const markdownModule = await loadFile();
-      console.log(markdownModule)
       const rawMarkdown = markdownModule;
 
       // Array to hold the TOC items
@@ -37,7 +36,6 @@ const BlogPost = () => {
 
       // Override heading rendering
       renderer.heading = (element) => {
-        console.log(element);
         let text = element.text
         let level = element.depth
         // Create a slug for the heading to use as an anchor
@@ -55,7 +53,6 @@ const BlogPost = () => {
 
       // Parse the markdown content
       const { data, content } = matter(rawMarkdown);
-      console.log(rawMarkdown)
       const parsedContent = marked(content, { renderer });
 
       // Set the content and the TOC

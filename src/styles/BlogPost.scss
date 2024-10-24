@@ -130,7 +130,7 @@
             margin: 2vh 5%;
 
             h2{
-                padding: 5vh 0;
+                padding: 4vh 0;
                 font-size: calc(24px + 0.390625vw);
             }
 
@@ -145,6 +145,7 @@
                 padding: 2vh 0;
                 text-indent: 3vw;
                 color: #d7d7d7;
+                font-family: inter, sans-serif;
             }
 
             a{
@@ -160,6 +161,18 @@
 
                 p{
                     text-indent: 0;
+                }
+            }
+
+            ol{
+                padding: 2vh 0;
+                list-style: decimal;
+                font-size: calc(14px + 0.390625vw);
+                text-align: left;
+                text-indent: 0;
+
+                li{
+                    padding: 1vh 0;
                 }
             }
         }
