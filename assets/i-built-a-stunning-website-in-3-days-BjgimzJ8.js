@@ -1,8 +1,11 @@
 const e=`---\r
 title: "I Built a Stunning Website from Scratch in 3 Days"\r
 writedate: "10/23/2024"\r
+timestamp: "11:47 PM"\r
 description: "I built this personal website in 3 days, from scratch, using vite, react, sass, and a lot of AI. Here’s how I did it…"\r
-\r
+length: "7 min read"\r
+image: "/images/codingImg.jpg"\r
+alt: "My Coding Setup"\r
 ---\r
 \r
 That’s right, 3 days. Not to mention to 5 college classes I attended(totaling 5 hours), completing an entire computer algorithms problem set, and reading the entirety of “The Mom Test”(my new favorite product development book, check out my review [here](/blog/books/the-mom-test)). The secret? An amazing system for development which I have been perfecting for 2 years. Including specific habits, helpful software/platforms, and a beautiful tech stack.\r
@@ -55,7 +58,7 @@ With projects that I get really invested in, I will take this level of focus to 
 \r
 >This phenomena is nearly impossible to explain, I would say that it feels like exerting maximum brain function, trying to solve an impossible arbitrary puzzle.\r
 \r
-## 3 Regular Days\r
+## Three Regular Days\r
 \r
 My key to an extreme level of productivity is not to spend a lot of time working, its to spend a very little time on things that are not productive. As I'm sure you can tell from reading this post, I spend a lot of effort to increase my efficiency even marginally. When I decided to build this website, I did not really have a focus on speed. All I needed to do was switch it to my main project until finish. Using the system described above, which really encapsulates my regular routine, this is the speed at which I work on projects regularly. Obviously my previous react and web design knowledge helped significantly. If I had to learn a new technology to accomplish this, while still working at the same pace, a lot of time would be spent learning. For this project I only had to touch up on some react knowledge and figure out how to serve markdown files with Vite. Most of my projects require much more digging around.\r
 \r

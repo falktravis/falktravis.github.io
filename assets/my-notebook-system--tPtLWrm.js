@@ -1,0 +1,1 @@
+const e={title:"My Notebook System",writedate:"10/24/2024",timestamp:"2:41 PM",description:"If you are able to use notebooks effectively, they should become an extension of your brain. That comes with serious productivity increases, mental fortitude, and peace. Here's how...",length:"3 min read",image:"/images/codingImg.jpg",alt:"Moleskine Notebooks"};export{e as attributes};
