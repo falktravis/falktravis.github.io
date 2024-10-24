@@ -22,7 +22,7 @@ export default function BlogHome() {
         <h3>{post.title}</h3>
         <div className="subheading">
           <p id='category'>{post.category}</p>
-          <p id='date'>{post.date}</p>
+          <p id='date'>{post.writedate}</p>
         </div>
         <p>{post.description}</p>
       </Link>
@@ -38,7 +38,7 @@ export default function BlogHome() {
           <h3>{post.title}</h3>
           <div className="subheading">
             <p id='category'>{post.category}</p>
-            <p id='date'>{post.date}</p>
+            <p id='date'>{post.writedate}</p>
           </div>
           <p>{post.description}</p>
         </div>
@@ -66,7 +66,6 @@ export default function BlogHome() {
         }
 
         // Add the parsed data to the list of posts
-        print
         postList[category][slug] = {...(post.attributes), slug, category };
       }
 
@@ -113,7 +112,7 @@ export default function BlogHome() {
       searchResults[category] = {};
       for (const slug in posts[category]) {
         const post = posts[category][slug];
-        if (post.title.toLowerCase().includes(e.target.value.toLowerCase()) || post.description.toLowerCase().includes(e.target.value.toLowerCase()) || post.category.toLowerCase().includes(e.target.value.toLowerCase()) || post.date.toLowerCase().includes(e.target.value.toLowerCase())) {
+        if (post.title.toLowerCase().includes(e.target.value.toLowerCase()) || post.description.toLowerCase().includes(e.target.value.toLowerCase()) || post.category.toLowerCase().includes(e.target.value.toLowerCase()) || post.writedate.toLowerCase().includes(e.target.value.toLowerCase())) {
           searchResults[category][slug] = post;
         }
       }
@@ -166,7 +165,7 @@ export default function BlogHome() {
                             <h3>{post.title}</h3>
                             <div className="subheading">
                               <p id='category'>{post.category}</p>
-                              <p id='date'>{post.date}</p>
+                              <p id='date'>{post.writedate}</p>
                             </div>
                             <p>{post.description}</p>
                             </Link>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link, useLocation } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import matter from 'gray-matter';
 import { marked } from 'marked';
 import profilePic from '/images/FavIcon.png';
@@ -7,7 +7,6 @@ import './styles/BlogPost.scss';
 import {Helmet} from "react-helmet";
 
 const BlogPost = () => {
-  const location = useLocation(); // Access the current URL
   const { category, slug } = useParams();
   const [content, setContent] = useState('');
   const [metadata, setMetadata] = useState({});
@@ -15,9 +14,20 @@ const BlogPost = () => {
   const [toc, setToc] = useState([]);
 
   useEffect(() => {
+    setSubPage(category);
+
     const loadMarkdown = async () => {
       // Fetch raw markdown content from the file
-      const rawMarkdown = await fetch(`/blog/${category}/${slug}.md`).then(res => res.text());
+      const markdownFiles = import.meta.glob(`../public/blog/**/*.md`, { as: 'raw' });
+      const loadFile = markdownFiles[`../public/blog/${category}/${slug}.md`];
+      console.log(loadFile)
+      if (!loadFile) {
+        throw new Error('Markdown file not found');
+      }
+    
+      const markdownModule = await loadFile();
+      console.log(markdownModule)
+      const rawMarkdown = markdownModule;
 
       // Array to hold the TOC items
       const newToc = [];
@@ -45,6 +55,7 @@ const BlogPost = () => {
 
       // Parse the markdown content
       const { data, content } = matter(rawMarkdown);
+      console.log(rawMarkdown)
       const parsedContent = marked(content, { renderer });
 
       // Set the content and the TOC
@@ -63,15 +74,6 @@ const BlogPost = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
-  useEffect(() => {
-    const pathSegments = location.pathname.split('/');
-    if (pathSegments[2]) {
-      setSubPage(pathSegments[2]);
-    }else{
-      setSubPage(null);
-    }
-  }, [location]);
 
   return (
     <main>
@@ -100,7 +102,7 @@ const BlogPost = () => {
               <img src={profilePic} alt="Travis Falk Profile Photo" />
               <div className="subheader">
                 <h2>Travis Falk</h2>
-                <p>{metadata.length} - {metadata.date}, {metadata.timestamp}</p>
+                <p>{metadata.length} - {metadata.writedate}, {metadata.timestamp}</p>
               </div>
             </div>
           </div>
