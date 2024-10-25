@@ -142,7 +142,7 @@ export default function BlogHome() {
                     {highlightPost("productivity", "my-notebook-system")}
                     {secondaryPost("productivity", "i-built-a-stunning-website-in-3-days", '')}
                     {secondaryPost("code", "name-your-variables", '')}
-                    {secondaryPost("devlogs", "a-facebook-gold-mine", "final")}
+                    {secondaryPost("devlogs", "scraping-facebook", "final")}
                   </div>
                 </div>
               ) : (
