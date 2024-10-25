@@ -61,7 +61,7 @@ export default function Portfolio() {
                   <h3>Software Website</h3>
                   <h4>Simple Web Development</h4>
                 </div>
-                <p>Designed and developed the front and backend of this website from scratch with React, Node JS, Express and SCSS. This website was designed to be simple and easy to navigate, with a focus on the product. You could login to a customer portal using different authentication providers, where you would be able to view and manage your current plan.</p>
+                <p>Designed and developed the front and backend of this website from scratch with React, Node JS, Express and SCSS. You could login to a customer portal using different authentication providers through Supabase. There, you would be able to view and manage your current plan.</p>
                 <div className="buttonContainer">
                   <a className='github' target='_blank' href="https://github.com/falktravis/Spatula-Software-Website"><img src={githubImge} alt="GitHub" />Repository</a>
                 </div>
@@ -98,6 +98,16 @@ export default function Portfolio() {
               <p>When I started creating websites with react, solutions like Vite were far less popular. This was very annoying for me because create-react-app was a terrible solution. I created this Webpack starter file as a boiler plate for new websites. Although I never tried to push it into the community, I used this religiously throughout my web development journey.</p>
               <div className="buttonContainer">
                 <a className='github' target='_blank' href="https://github.com/falktravis/WebpackStarter"><img src={githubImge} alt="GitHub" />Repository</a>
+              </div>
+            </div>
+            <div className="spatulaWebInterface">
+              <div className="titleContainer">
+                <h3>Fullstack Website</h3>
+                <h4>Real Time Web App</h4>
+              </div>
+              <p>Customer facing website displaying data from my backend application in real time through MongoDB applications. Built in React with NodeJS backend. Deployed on A2 hosting with Cpannel.</p>
+              <div className="buttonContainer">
+                <a className='github' target='_blank' href="https://github.com/falktravis/Spatula-Software-Web-Interface"><img src={githubImge} alt="GitHub" />Repository</a>
               </div>
             </div>
         </div>
