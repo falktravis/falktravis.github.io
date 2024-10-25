@@ -42,7 +42,7 @@ function generateRandomString(length) {
 
 export default function Home() {
   // Text animation
-  const words = ["Codes", "Innovates", "Designs", "Develops", "Builds", "Leads"];
+  const words = ["Codes", "Innovates", "Designs", "Develops", "Builds", "Leads", "Hacks"];
   const [wordIndex, setWordIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [text, setText] = useState(generateRandomString(words[wordIndex].length));

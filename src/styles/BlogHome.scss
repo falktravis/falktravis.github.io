@@ -92,7 +92,6 @@ a{
     
     .popularContainer{
         width: 70%;
-        height: 66vh;
         padding: 2vh 0;
         margin-left: 15%;
 
@@ -103,7 +102,6 @@ a{
         @media (max-width: 768px) {
             width: 98%;
             margin: 0 1%;
-            height: 100vh;
         }
         @media (max-width: 600px) {
             width: 85%;
@@ -119,7 +117,7 @@ a{
             grid-template-rows: 1fr 1fr 1fr;
 
             @media (max-width: 768px) {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: 42% 55%;
             }
             @media (max-width: 600px) {
                 grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
@@ -174,7 +172,7 @@ a{
                         font-size: calc(12px + 0.390625vw);
                         font-family: inter, sans-serif;
                         text-align: left;
-                        margin: 0 2.5%;
+                        padding: 1vh 2.5%;
                     }
                 }
             }
@@ -213,7 +211,7 @@ a{
                     font-size: calc(12px + 0.390625vw);
                     font-family: inter, sans-serif;
                     text-align: left;
-                    margin: 0 2.5%;
+                    padding: 1vh 2.5%;
                 }
             }
 
@@ -244,7 +242,6 @@ a{
             li{
                 width: 100%;
                 margin: 2vh 0;
-                height: 20vh;
                 background-color: main.$background2;
                 border-radius: 15px;
 
@@ -281,7 +278,7 @@ a{
                         font-size: calc(12px + 0.390625vw);
                         font-family: inter, sans-serif;
                         text-align: left;
-                        margin: 0 1%;
+                        padding: 1vh 1%;
                     }
                 }
             }

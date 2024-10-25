@@ -141,8 +141,8 @@ export default function BlogHome() {
                   <div className="popularDisplay">
                     {highlightPost("productivity", "my-notebook-system")}
                     {secondaryPost("productivity", "i-built-a-stunning-website-in-3-days", '')}
-                    {secondaryPost("other", "test", "final")}
-                    {secondaryPost("books", "the-mom-test", '')}
+                    {secondaryPost("code", "name-your-variables", '')}
+                    {secondaryPost("devlogs", "a-facebook-gold-mine", "final")}
                   </div>
                 </div>
               ) : (
@@ -174,6 +174,7 @@ export default function BlogHome() {
                 </div>
                 <ul>
                   <li><Link to='/blog/all'>All Posts</Link></li>
+                  <li><Link to='/blog/code'>Code</Link></li>
                   <li><Link to='/blog/devlogs'>Devlogs</Link></li>
                   <li><Link to='/blog/books'>Books</Link></li>
                   <li><Link to='/blog/productivity'>Productivity</Link></li>
