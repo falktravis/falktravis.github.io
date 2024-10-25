@@ -20,7 +20,6 @@ const BlogPost = () => {
       // Fetch raw markdown content from the file
       const markdownFiles = import.meta.glob(`../public/blog/**/*.md`, { as: 'raw' });
       const loadFile = markdownFiles[`../public/blog/${category}/${slug}.md`];
-      console.log(loadFile)
       if (!loadFile) {
         throw new Error('Markdown file not found');
       }
@@ -110,26 +109,26 @@ const BlogPost = () => {
           />
         </div>
         <aside className="info">
-        {toc.length > 0 && (
-            <div className="toc">
-              <ul>
-                {toc.map((item, index) => (
-                  <li key={index} id={"level" + item.level}>
-                    <a
-                      href={`#${item.slug}`}
-                      onClick={(e) => {
-                        e.preventDefault(); // Prevent default link behavior
-                        scrollToElement(item.slug); // Smooth scroll to the heading
-                      }}
-                    >
-                      {item.text}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-      </aside>
+          {toc.length > 0 ? (
+              <div className="toc">
+                <ul>
+                  {toc.map((item, index) => (
+                    <li key={index} id={"level" + item.level}>
+                      <a
+                        href={`#${item.slug}`}
+                        onClick={(e) => {
+                          e.preventDefault(); // Prevent default link behavior
+                          scrollToElement(item.slug); // Smooth scroll to the heading
+                        }}
+                      >
+                        {item.text}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
+        </aside>
       </div>
     </main>
   );
