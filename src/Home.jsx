@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import './styles/Home.scss'
 import profileImg from '/images/profile.jpg'
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 
 //tech stack logos
 import gastbyLogo from '/images/gatsbyLogo.svg'
@@ -98,51 +98,57 @@ export default function Home() {
     return () => clearInterval(timerId);
   }, [onTimeout]);
 
-    // Snowflake animation
-    const [snowflakes, setSnowflakes] = useState([]);
+  // Snowflake animation
+  const [snowflakes, setSnowflakes] = useState([]);
 
-    const createSnowflake = () => {
-      const size = Math.random() * 30 + 8;
-      const drift = Math.random() * 50 + size;
-      const animationDuration = Math.random() * 4 + 2;
-      const spinDuration = Math.random() * 3 + 1; 
+  const createSnowflake = () => {
+    const size = Math.random() * 30 + 8;
+    const drift = Math.random() * 50 + size;
+    const animationDuration = Math.random() * 4 + 2;
+    const spinDuration = Math.random() * 3 + 1; 
 
-      const newSnowflake = {
-        id: Math.random(), 
-        size,
-        drift,
-        left: Math.random() * 100,
-        animationDuration,
-        spinDuration,
-      };
-
-      setSnowflakes((prev) => [...prev, newSnowflake]);
-
-      // Remove snowflake after it's done falling
-      setTimeout(() => {
-        setSnowflakes((prev) => prev.filter((flake) => flake.id !== newSnowflake.id));
-      }, animationDuration * 1000); // Convert seconds to milliseconds
+    const newSnowflake = {
+      id: Math.random(), 
+      size,
+      drift,
+      left: Math.random() * 100,
+      animationDuration,
+      spinDuration,
     };
 
-    const handleAnimationEnd = (flakeId) => {
-      setSnowflakes((prev) => prev.filter((flake) => flake.id !== flakeId));
-    };
+    setSnowflakes((prev) => [...prev, newSnowflake]);
+
+    // Remove snowflake after it's done falling
+    setTimeout(() => {
+      setSnowflakes((prev) => prev.filter((flake) => flake.id !== newSnowflake.id));
+    }, animationDuration * 1000); // Convert seconds to milliseconds
+  };
+
+  const handleAnimationEnd = (flakeId) => {
+    setSnowflakes((prev) => prev.filter((flake) => flake.id !== flakeId));
+  };
+
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    // Check if the URL hash is '#contact' and scroll into view if so
-    if (window.location.hash === '#contact') {
-      window.addEventListener("load", () => {
-        const contactElement = document.getElementById('contact');
+    console.log(location);
+    if (location.hash === '#contact') {
+      location.hash = '';
+      console.log('scrolling');
+      setTimeout(() => {
+        const contactElement = document.getElementById('Contact');
         contactElement.scrollIntoView({ behavior: 'smooth', block: "center", inline: "center" });
-      });
+        navigate(window.location.pathname, { replace: true });
+      }, 100);
     }
 
     const interval = setInterval(() => {
       createSnowflake();
-    }, 150); // Create a new snowflake every 300ms
+    }, 150);
 
-    return () => clearInterval(interval); // Cleanup on component unmount
-  }, []);
+    return () => clearInterval(interval);
+  }, [location]);
   
   return (
     <>  
@@ -221,7 +227,7 @@ export default function Home() {
           <div className="fade-overlay fade-left"></div>
           <div className="fade-overlay fade-right"></div>
         </div>
-        <div id='contact' className="contact">
+        <div id='Contact' className="contact">
           <div className="contacts">
             <div className="head">
               <h2>Contact</h2>
