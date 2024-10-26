@@ -1,20 +1,20 @@
 const e=`---\r
-title: "I Built a Stunning Website from Scratch in 3 Days"\r
+title: "Maximum Output"\r
 writedate: "10/23/2024"\r
 timestamp: "11:47 PM"\r
-description: "I built this personal website in 3 days, from scratch, using vite, react, sass, and a lot of AI. Here’s how I did it…"\r
+description: "I built this website from scratch in only three days. Here's how I radically increased my development speed to condense projects like this into such a short window."\r
 length: "7 min read"\r
 image: "/images/codingImg.jpg"\r
 alt: "My Coding Setup"\r
 ---\r
 \r
-That’s right, 3 days. Not to mention to 5 college classes I attended(totaling 5 hours), completing an entire computer algorithms problem set, and reading the entirety of “The Mom Test”(my new favorite product development book, check out my review [here](/blog/books/the-mom-test)). The secret? An amazing system for development which I have been perfecting for 2 years. Including specific habits, helpful software/platforms, and a beautiful tech stack.\r
+That’s right, 3 days. Not to mention to 5 college classes I attended(totaling 5 hours), completing an entire algorithms problem set, and reading the entirety of “The Mom Test”(my new favorite product development book, check out my review [here](/blog/books/the-mom-test)). The secret? A system for speedy development which I have been perfecting for 2 years.\r
 \r
 >Yes, the website has changed since I first published it. [Here](https://github.com/falktravis/falktravis.github.io/tree/three-day-final) is an unchanged version of the website after 3 days.\r
 \r
 ## My System\r
 \r
-I had a very un natural introduction to the world of Computer Science. Learning to code around 10 years old with code.org and a lego robotics kit. Since then my interest has blossomed. But because I was so young and reserved about my interests, I did not receive a lot of formal education surrounding the topic until high school, and even then I was not able take any serious classes until my senior year. So, I did a lot of my coding holed up in my room with the lights off. Because of this unorthodox eduction, I learned to do things in a way that might be looked down upon by the broader community. A mad scramble to complete my project as quickly as possible, using everything at my disposal to do so, and sacrificing what ever gets in my way. Otherwise known as...\r
+I had a very unnatural introduction to the world of Computer Science. Learning to code around 10 years old with code.org and a lego robotics kit. Because I was so young and reserved about my interests, because coding certainly was not considered cool to my friends, I did not receive a lot of formal education surrounding the topic until high school. Even then I was not able take any serious classes until my senior year. So, I did a lot of my coding holed up in my room with the lights off. Because of this self paced eduction, I learned to do things very sporadically and messy. A mad scramble to complete my project as quickly as possible, using everything at my disposal to do so, and sacrificing what ever gets in my way. Otherwise known as...\r
 \r
 ## The Sprint\r
 \r
@@ -22,9 +22,9 @@ There are three main components of *The Sprint*, your development environment, p
 \r
 ### Development Environment\r
 \r
-Your development environment is very important, and often over looked. Small improvements in your development environment can make a large impact on your effectiveness compounded over weeks, months, and years. I personally try as many tools as possible, paying through walls when necessary, to build up the perfect dev environment. It will be different for everyone, so the most important thing here is simply to pay attention to it, and do research on ways to improve your set up periodically. I will share some of my secrets here, but I encourage you to create your own Nirvana.\r
+Your development environment is often overlooked. Small improvements in your dev environment can make a large impact on your effectiveness compounded over weeks, months, and years. I personally try as many tools as possible, paying through walls when necessary, to build up the perfect dev environment. It will be different for everyone, so the most important thing here is simply to pay attention to it, and do research on ways to improve your set up periodically. I will share some of my secrets here, but I encourage you to create your own Nirvana.\r
 \r
-**Github Copilot**: I get this for free as a student and it is the best one I have discovered to date. I have tried a bunch, but they are very hard to compare. Ultimately, you just need some auto complete tool. Even if its just for the stupid simple auto complete tasks. You should not be expecting Copilot to do any complex coding or fill out entire functions, although sometimes it surprises me.\r
+**Github Copilot**: I get this for free as a student and it is the best assistant I have discovered to date. I have tried a bunch, but they are very hard to compare. Ultimately, you just need some auto complete tool. Even if its just for the stupid simple auto complete tasks. You should not be expecting Copilot to do any complex coding or fill out entire functions, although sometimes it surprises me.\r
 \r
 **"Paid" LLM**: I put paid in quotes because you don't actually have to pay for it, just use a paid version. Although I would never to this, there are ways to use the free trials for Claude and the newest GPT almost indefinitely... ;)\r
 \r

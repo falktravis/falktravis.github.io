@@ -2,13 +2,13 @@ const e=`---\r
 title: "My Notebook System"\r
 writedate: "10/24/2024"\r
 timestamp: "2:41 PM"\r
-description: "If you are able to use notebooks effectively, they should become an extension of your brain. That comes with serious productivity increases, mental fortitude, and peace. Here's how..."\r
+description: "If you are able to use notebooks effectively, they become an extension of your brain. That comes with serious productivity increases, mental fortitude, and peace."\r
 length: "3 min read"\r
 image: "/images/codingImg.jpg"\r
 alt: "Moleskine Notebooks"\r
 ---\r
 \r
-I got my first Moleskine 2 years ago as a gift, after that, I was instantly hooked. At this point me and my primary notebook are practically inseparable. It has completely changed the way that I think, significantly increasing my effectiveness, while also giving me a way to deal with mental blocks. I operate two notebooks simultaneously, one for projects, and one for journaling. Writing roughly 3-4 pages every day, split between the two.\r
+At this point me and my primary notebook are practically inseparable. It has completely changed the way I think, increased my effectiveness, and gave me a way to deal with mental blocks. I operate two notebooks simultaneously, one for projects, and one for journaling. Writing roughly 3-4 pages every day, split between the two.\r
 \r
 ## Primary Notebook\r
 \r

@@ -2,13 +2,13 @@
 title: "My Notebook System"
 writedate: "10/24/2024"
 timestamp: "2:41 PM"
-description: "If you are able to use notebooks effectively, they should become an extension of your brain. That comes with serious productivity increases, mental fortitude, and peace. Here's how..."
+description: "If you are able to use notebooks effectively, they become an extension of your brain. That comes with serious productivity increases, mental fortitude, and peace."
 length: "3 min read"
 image: "/images/codingImg.jpg"
 alt: "Moleskine Notebooks"
 ---
 
-I got my first Moleskine 2 years ago as a gift, after that, I was instantly hooked. At this point me and my primary notebook are practically inseparable. It has completely changed the way that I think, significantly increasing my effectiveness, while also giving me a way to deal with mental blocks. I operate two notebooks simultaneously, one for projects, and one for journaling. Writing roughly 3-4 pages every day, split between the two.
+At this point me and my primary notebook are practically inseparable. It has completely changed the way I think, increased my effectiveness, and gave me a way to deal with mental blocks. I operate two notebooks simultaneously, one for projects, and one for journaling. Writing roughly 3-4 pages every day, split between the two.
 
 ## Primary Notebook
 

@@ -14,9 +14,9 @@ alt: "Facebook Sign"
 
 ## The Problem
 
-In my Junior year of highschool, armed with my parents car and trailer, me and one of my friend started flipping couches on Facebook Marketplace. We realized it was a decent way to make some pocket cash. But instead of trying to expand this operation, like most flippers would, I realized that there was a serious bottleneck in the process, and went about fixing it. The first person to message someone with a descent couch, usually gets to buy it. We were essentially running a moving company, where marketing was done by message Facebook Marketplace owners. And to market effectively, everything depended on speed.
+In my Junior year of highschool, armed with my parents car and trailer, me and one of my friends started flipping couches on Facebook Marketplace. We realized it was a decent way to make some pocket cash. But instead of trying to expand this operation, like most flippers did, I realized that there was a serious bottleneck in the process, and went about fixing it. The first person to message someone with a descent couch, usually gets to buy it. We were essentially running a moving company, where marketing was done by messaging Facebook Marketplace owners. And to market effectively, everything depended on speed.
 
-But you had to get really lucky to message someone first, unless you were sitting there refreshing the page 12 hours a day. This is what I wanted to fix. 
+But you had to get really lucky to message someone first, unless you were sitting there refreshing the page 12 hours a day. This is what I set out to fix. 
 
 ## The Solution
 
