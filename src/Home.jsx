@@ -192,7 +192,7 @@ export default function Home() {
             <div className="head">
               <h2>About Me</h2>
             </div>
-            <p>Nice to meet you! My name is Travis Falk. I am a 19 year old product/software developer&#40;among other things&#41; living in Boston. I have been passionate about building products and software development for years, starting my coding journey around 10 years old. This website is a collection of my previous experiences and projects, as well as my current interests and knowledge. Enjoy!</p>
+            <p>Nice to meet you! My name is Travis Falk. I am a 19 year old product/software developer&#40;among other things&#41; living in Boston. I have been obsessed with building products and software development for years, starting my coding journey around 10 years old. This website is a collection of my previous experiences and projects, as well as my current interests and knowledge. Enjoy!</p>
           </div>
         </div>
         <div className="techStack">

@@ -6,6 +6,7 @@ import Home from './Home'
 import BlogHome from './BlogHome'
 import Portfolio from './Portfolio'
 import BlogPost from './BlogPost'
+import ReadingList from './ReadingList'
 
 // Google Analytics
 import ReactGA from 'react-ga4';
@@ -20,6 +21,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/blog" element={<BlogHome />} />
         <Route path='/portfolio' element={<Portfolio />} />
+        <Route path='/reading-list' element={<ReadingList />} />
         <Route path="/blog/:category" element={<BlogHome />} />
         <Route path="/blog/:category/:slug" element={<BlogPost />} />
       </Routes>

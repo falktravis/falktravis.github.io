@@ -241,7 +241,7 @@ export default function Portfolio() {
   }, [displayState]);
 
   return (
-    <main>
+    <main className='Portfolio'>
       <header>
         <h1>Portfolio</h1>
         <p>Explore my Projects, Experiences, and Education</p>

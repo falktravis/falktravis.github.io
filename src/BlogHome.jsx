@@ -119,7 +119,7 @@ export default function BlogHome() {
 
   return (
     <>
-        <main>
+        <main className='BlogHome'>
             <div className="head">
               <div className="searchContainer">
                 <input onChange={(e) => searchChange(e)} type="text" placeholder="Search..." />
@@ -143,10 +143,21 @@ export default function BlogHome() {
                     {secondaryPost("productivity", "i-built-a-stunning-website-in-3-days", '')}
                     {secondaryPost("code", "name-your-variables", '')}
                     {secondaryPost("devlogs", "scraping-facebook", "final")}
+                    <Link className='ReadingList' to='/reading-list'>
+                      <h3>My Reading List</h3>
+                      <p>A comprehensive list and ranking of all the books I've picked up in the last couple years.</p>
+                    </Link>
                   </div>
                 </div>
               ) : (
                 <div className="listings">
+                  {subPage === 'books' ? (
+                    <Link className='ReadingList' to='/reading-list'>
+                      <h3>Reading List</h3>
+                      <p>A comprehensive list and ranking of all the books I've picked up in the last couple years.</p>
+                    </Link>  
+                  ) : null
+                  }
                   <ul>
                   {(Object.keys(listedPosts).map((category) => (
                     Object.keys(listedPosts[category]).map((slug) => {

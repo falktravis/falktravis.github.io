@@ -72,7 +72,7 @@ const BlogPost = () => {
   };
 
   return (
-    <main>
+    <main className='BlogPost'>
       <Helmet>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
@@ -82,7 +82,7 @@ const BlogPost = () => {
         {subPage != null ? (
             <>
               <p> &#62; </p>
-              <Link to={`/blog/${subPage}`}>{subPage}</Link>
+              <Link to={`/blog/${subPage}`}>{subPage.charAt(0).toUpperCase() + subPage.slice(1)}</Link>
               <p> &#62; </p>
               <p>{metadata.title}</p>
             </>
