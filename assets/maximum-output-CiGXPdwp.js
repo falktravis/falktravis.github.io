@@ -1,1 +1,0 @@
-const e={title:"Maximum Output",writedate:"10/23/2024",timestamp:"11:47 PM",description:"I built this website from scratch in only three days. Here's how I radically increased my development speed to condense projects like this into such a short window.",length:"7 min read",image:"/images/codingImg.jpg",alt:"My Coding Setup"};export{e as attributes};

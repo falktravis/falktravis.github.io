@@ -4,7 +4,7 @@ writedate: "10/25/2024"\r
 timestamp: "1:25 PM"\r
 description: "I see devs naming their variables 'x' or 'var' all the time. Why not? Isn't it easier to type out? Why should you spend the effort to give it a name thats three words camel case?"\r
 length: "3 min read"\r
-image: "/images/themomtest.jpg"\r
-alt: "The Mom Test"\r
+image: "/images/name-your-variables-img.jpg"\r
+alt: "Code"\r
 \r
 ---`;export{e as default};
