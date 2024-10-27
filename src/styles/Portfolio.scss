@@ -1,7 +1,7 @@
 @use 'main';
 
 .Portfolio{
-    width: 100%;
+    width: 100vw;
 
     header{
         width: 100%;
@@ -38,7 +38,7 @@
     }
     
     .portfolioContentContainer{
-        width: 100%;
+        width: 100vw;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -682,10 +682,11 @@
     
                 @media (max-width: 768px) {
                     grid-template-columns: 1fr;
-                    grid-template-rows: 50vh 50vh 50vh;
+                    grid-template-rows: 1fr 1fr 1fr;
                 }
                 
                 >div{
+                    padding: 2vh;
     
                     h2{
                         width: calc(100% - 4vw);
@@ -694,9 +695,7 @@
                         font-family: inter, sans-serif;
                         color: main.$primary;
                         font-weight: 700;
-                        margin-left: 2vw;
                         position: relative;
-                        margin-top: 2vh;
     
                         &::after{
                             content: '';
@@ -708,8 +707,8 @@
                     }
     
                     .experienceInfo{
-                        margin: 1vh 2vw;
-                        width: calc(100% - 4vw);
+                        margin: 1vh 0;
+                        width: calc(100% - 4vh);
                         display: flex;
                         justify-content: space-between;
     
@@ -725,7 +724,7 @@
                         font-size: calc(11px + 0.390625vw);
                         font-family: inter, sans-serif;
                         color: main.$primary;
-                        margin: 1vh 2vw;
+                        margin: 1vh 0;
                     }
     
                     h3{
@@ -733,7 +732,7 @@
                         font-size: calc(14px + 0.390625vw);
                         font-family: inter, sans-serif;
                         color: main.$highlight;
-                        margin-left: calc(2vw + 1em);
+                        margin-left: 1em;
                         margin-top: 1vh;
                         font-weight: 700;
                     }
@@ -747,7 +746,7 @@
                             font-size: calc(11px + 0.390625vw);
                             font-family: inter, sans-serif;
                             color: main.$primary;
-                            margin-left: calc(2vw + 1em);
+                            margin-left: 1em;
     
                             &:before {
                                 display: inline-block;
@@ -860,7 +859,7 @@
     
                             @media (max-width: 1200px) {
                                 h2{
-                                    font-size: calc(16px + 0.390625vw);
+                                    font-size: calc(18px + 0.390625vw);
                                 }
                                 p{
                                     font-size: calc(8px + 0.390625vw);
@@ -868,7 +867,7 @@
                             }
                             @media (max-width: 768px) {
                                 h2{
-                                    font-size: calc(12px + 0.390625vw);
+                                    font-size: calc(14px + 0.390625vw);
                                 }
                                 p{
                                     font-size: calc(6px + 0.390625vw);
@@ -880,10 +879,10 @@
                                 }
     
                                 h2{
-                                    font-size: calc(16px + 0.390625vw);
+                                    font-size: calc(20px + 0.390625vw);
                                 }
                                 p{
-                                    font-size: calc(8px + 0.390625vw);
+                                    font-size: calc(12px + 0.390625vw);
                                 }
                             }
                         }
@@ -990,12 +989,15 @@
                             }
                             @media (max-width: 768px) {
                                 p, ul li{
-                                    font-size: calc(6px + 0.390625vw) !important;
+                                    font-size: calc(8px + 0.390625vw) !important;
                                 }
                             }
                             @media (max-width: 600px) {
                                 h3{
-                                    font-size: calc(10px + 0.390625vw) !important;
+                                    font-size: calc(14px + 0.390625vw) !important;
+                                }
+                                p, ul li{
+                                    font-size: calc(12px + 0.390625vw) !important;
                                 }
                             }
                         }

@@ -59,19 +59,19 @@
         }
 
         > div:nth-child(1) {
-            p {
+            h2,p {
                 color: #FFD700; // Replace with the color for the second div
             }
         }
 
         > div:nth-child(2) {
-            p {
+            h2,p {
                 color: #b1b1b1; // Replace with the color for the second div
             }
         }
         
         > div:nth-child(3) {
-            p {
+            h2,p {
                 color: #b08d57; // Replace with the color for the third div
             }
         }
@@ -83,8 +83,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 2vh 2vw;
-            margin: 2vh 0;
+            padding: 2vh;
+            margin: 1vh 0;
             transition: 100ms ease-in-out;
 
             div{
@@ -93,7 +93,7 @@
                 max-width: 90%;
 
                 h2,a{
-                    font-size: calc(11px + 0.78125vw);
+                    font-size: calc(8px + 0.78125vw);
                     font-family: inter, sans-serif;
                     font-weight: 500;
                     text-align: left;
@@ -113,7 +113,7 @@
             }
 
             &>p{
-                font-size: calc(12px + 0.390625vw);
+                font-size: calc(8px + 0.78125vw);
                 font-family: inter, sans-serif;
                 font-weight: 800;
                 text-align: center;

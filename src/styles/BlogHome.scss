@@ -306,7 +306,6 @@
             &:hover{
                 cursor: pointer;
                 transform: scale(1.02);
-                box-shadow: #b900e398 0px 0px 20px 2px;
             }
 
             h3{
@@ -317,6 +316,14 @@
 
                 @media (max-width: 1000px) {
                     font-size: calc(18px + 0.390625vw);
+                }
+
+                &:after{
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 0.40vh;
+                    background: main.$highlight;
                 }
             }
 

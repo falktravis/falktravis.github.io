@@ -1,5 +1,6 @@
 import React from 'react'
 import './styles/ReadingList.scss'
+import { Link } from 'react-router-dom'
 
 export default function ReadingList() {
     const books = [
@@ -25,8 +26,16 @@ export default function ReadingList() {
             author: 'Ben Horowitz',
         },
         {
+            title: 'Deep Work',
+            author: 'Cal Newport',
+        },
+        {
             title: 'The Charisma Myth',
             author: 'Olivia Fox Cabane',
+        },
+        {
+            title: 'The Truth About Crypto',
+            author: 'Ric Edelman',
         },
         {
             title: 'The Lean Startup',
@@ -37,6 +46,10 @@ export default function ReadingList() {
             author: 'Brandon Sanderson',
         },
         {
+            title: 'Facebook: The Inside Story',
+            author: 'Steven Levy',
+        },
+        {
             title: 'Zero to One',
             author: 'Peter Thiel',
         },
@@ -45,13 +58,29 @@ export default function ReadingList() {
             author: 'Stephen Covey',
         },
         {
-            title: 'Facebook: The Inside Story',
-            author: 'Steven Levy',
+            title: 'How to Win Friends and Influence People',
+            author: 'Dale Carnegie',
+        },
+        {
+            title: 'Shadow and Bone',
+            author: 'Leigh Bardugo',
+        },
+        {
+            title: 'The Prince',
+            author: 'Niccolo Machiavelli',
+        },
+        {
+            title: 'The Four Hour Work Week',
+            author: 'Tim Ferriss',
         },
         {
             title: 'Titan',
             author: 'Ron Chernow',
-        }
+        },
+        {
+            title: 'How to Talk to Anyone',
+            author: 'Leil Lowndes',
+        },
     ]
 
   return (
@@ -65,7 +94,7 @@ export default function ReadingList() {
                 <div key={index}>
                     <div className="info">
                         <h2>{book.title} - {book.author}</h2>
-                        {book.blogPost ? <a href={book.blogPost}>Blog Post</a> : null}
+                        {book.blogPost ? <Link to={book.blogPost}>Blog Post</Link> : null}
                     </div>
                     <p>{index + 1}</p>
                 </div>

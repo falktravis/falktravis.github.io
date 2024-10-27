@@ -1,20 +1,20 @@
 ---
-title: "I Built a Stunning Website from Scratch in 3 Days"
+title: "Maximum Output Development"
 writedate: "10/23/2024"
 timestamp: "11:47 PM"
-description: "I built this personal website in 3 days, from scratch, using vite, react, sass, and a lot of AI. Here’s how I did it…"
+description: "I built this website from scratch in only three days. Here's how I radically increased my development speed to condense projects like this into such a short window."
 length: "7 min read"
 image: "/images/codingImg.jpg"
 alt: "My Coding Setup"
 ---
 
-That’s right, 3 days. Not to mention to 5 college classes I attended(totaling 5 hours), completing an entire computer algorithms problem set, and reading the entirety of “The Mom Test”(my new favorite product development book, check out my review [here](/blog/books/the-mom-test)). The secret? An amazing system for development which I have been perfecting for 2 years. Including specific habits, helpful software/platforms, and a beautiful tech stack.
+That’s right, 3 days. Not to mention to 5 college classes I attended(totaling 5 hours), completing an entire algorithms problem set, and reading the entirety of “The Mom Test”(my new favorite product development book, check out my review [here](/blog/books/the-mom-test)). The secret? A system for speedy development which I have been perfecting for 2 years.
 
 >Yes, the website has changed since I first published it. [Here](https://github.com/falktravis/falktravis.github.io/tree/three-day-final) is an unchanged version of the website after 3 days.
 
 ## My System
 
-I had a very un natural introduction to the world of Computer Science. Learning to code around 10 years old with code.org and a lego robotics kit. Since then my interest has blossomed. But because I was so young and reserved about my interests, I did not receive a lot of formal education surrounding the topic until high school, and even then I was not able take any serious classes until my senior year. So, I did a lot of my coding holed up in my room with the lights off. Because of this unorthodox eduction, I learned to do things in a way that might be looked down upon by the broader community. A mad scramble to complete my project as quickly as possible, using everything at my disposal to do so, and sacrificing what ever gets in my way. Otherwise known as...
+I had a very unnatural introduction to the world of Computer Science. Learning to code around 10 years old with code.org and a lego robotics kit. Because I was so young and reserved about my interests, because coding certainly was not considered cool to my friends, I did not receive a lot of formal education surrounding the topic until high school. Even then I was not able take any serious classes until my senior year. So, I did a lot of my coding holed up in my room with the lights off. Because of this self paced eduction, I learned to do things very sporadically and messy. A mad scramble to complete my project as quickly as possible, using everything at my disposal to do so, and sacrificing what ever gets in my way. Otherwise known as...
 
 ## The Sprint
 
@@ -22,9 +22,9 @@ There are three main components of *The Sprint*, your development environment, p
 
 ### Development Environment
 
-Your development environment is very important, and often over looked. Small improvements in your development environment can make a large impact on your effectiveness compounded over weeks, months, and years. I personally try as many tools as possible, paying through walls when necessary, to build up the perfect dev environment. It will be different for everyone, so the most important thing here is simply to pay attention to it, and do research on ways to improve your set up periodically. I will share some of my secrets here, but I encourage you to create your own Nirvana.
+Your development environment is often overlooked. Small improvements in your dev environment can make a large impact on your effectiveness compounded over weeks, months, and years. I personally try as many tools as possible, paying through walls when necessary, to build up the perfect dev environment. It will be different for everyone, so the most important thing here is simply to pay attention to it, and do research on ways to improve your set up periodically. I will share some of my secrets here, but I encourage you to create your own Nirvana.
 
-**Github Copilot**: I get this for free as a student and it is the best one I have discovered to date. I have tried a bunch, but they are very hard to compare. Ultimately, you just need some auto complete tool. Even if its just for the stupid simple auto complete tasks. You should not be expecting Copilot to do any complex coding or fill out entire functions, although sometimes it surprises me.
+**Github Copilot**: I get this for free as a student and it is the best assistant I have discovered to date. I have tried a bunch, but they are very hard to compare. Ultimately, you just need some auto complete tool. Even if its just for the stupid simple auto complete tasks. You should not be expecting Copilot to do any complex coding or fill out entire functions, although sometimes it surprises me.
 
 **"Paid" LLM**: I put paid in quotes because you don't actually have to pay for it, just use a paid version. Although I would never to this, there are ways to use the free trials for Claude and the newest GPT almost indefinitely... ;)
 
@@ -60,6 +60,6 @@ With projects that I get really invested in, I will take this level of focus to 
 
 ## Three Regular Days
 
-My key to an extreme level of productivity is not to spend a lot of time working, its to spend a very little time on things that are not productive. As I'm sure you can tell from reading this post, I spend a lot of effort to increase my efficiency even marginally. When I decided to build this website, I did not really have a focus on speed. All I needed to do was switch it to my main project until finish. Using the system described above, which really encapsulates my regular routine, this is the speed at which I work on projects regularly. Obviously my previous react and web design knowledge helped significantly. If I had to learn a new technology to accomplish this, while still working at the same pace, a lot of time would be spent learning. For this project I only had to touch up on some react knowledge and figure out how to serve markdown files with Vite. Most of my projects require much more digging around.
+My path to an increased level of productivity is not to spend a lot of time working, its to spend a very little time on things that are not productive. As I'm sure you can tell from reading this post, I spend a lot of effort to increase my efficiency even marginally. Using the system described above, which really encapsulates my regular routine, this is the speed at which I work on projects regularly. Obviously my previous react and web design knowledge helped significantly. If I had to learn a new technology to accomplish this, while still working at the same pace, a lot of time would be spent learning. For this project I only had to touch up on some react knowledge and figure out how to serve markdown files with Vite. Most of my projects require much more digging around.
 
-Thanks for reading! I am really proud of this project, I am spending a lot of time condensing my thoughts into posts like this which I can display to anyone with similar interests. Check out some of my other posts or my portfolio! Thanks.
+I am really proud of this project and it is really great to be able to spill my thoughts like this. I know there is always another level of output and I continue to search for ways to increase my norm. If you liked this post or have any questions, feel free to reach out. I am happy to talk. Thanks for reading!

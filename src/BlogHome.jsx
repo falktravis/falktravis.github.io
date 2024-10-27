@@ -139,8 +139,8 @@ export default function BlogHome() {
               {subPage == null ? (
                 <div className="popularContainer">
                   <div className="popularDisplay">
-                    {highlightPost("productivity", "my-notebook-system")}
-                    {secondaryPost("productivity", "i-built-a-stunning-website-in-3-days", '')}
+                    {highlightPost("productivity", "high-output-development")}
+                    {secondaryPost("productivity", "my-notebook-system", '')}
                     {secondaryPost("code", "name-your-variables", '')}
                     {secondaryPost("devlogs", "scraping-facebook", "final")}
                     <Link className='ReadingList' to='/reading-list'>
