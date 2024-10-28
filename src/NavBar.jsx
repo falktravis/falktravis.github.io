@@ -18,7 +18,7 @@ export default function NavBar() {
   return (
     <>
         <nav className={`NavBar home${isHome}`}>
-            <h1><Link to='/'>Travis Codes</Link></h1>
+            <h1><Link to='/'>Travis Falk</Link></h1>
             <ul>
                 <li><Link to='/blog'>Blog</Link></li>
                 <li><Link to='/portfolio'>Portfolio</Link></li>
