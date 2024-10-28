@@ -6,5 +6,4 @@ description: "I see devs naming their variables 'x' or 'var' all the time. Why n
 length: "3 min read"\r
 image: "/images/name-your-variables-img.jpg"\r
 alt: "Code"\r
-\r
 ---`;export{e as default};
