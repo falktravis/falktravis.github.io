@@ -141,7 +141,7 @@ export default function BlogHome() {
                   <div className="popularDisplay">
                     {highlightPost("productivity", "maximum-output-development")}
                     {secondaryPost("productivity", "my-second-brain", '')}
-                    {secondaryPost("code", "name-your-variables", '')}
+                    {secondaryPost("code", "writing-readable-code", '')}
                     {secondaryPost("devlogs", "scraping-facebook", "final")}
                     <Link className='ReadingList' to='/reading-list'>
                       <h3>My Reading List</h3>
