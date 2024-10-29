@@ -1,0 +1,1 @@
+const t={title:"Life at Boston University",writedate:"10/28/2024",timestamp:"10:04 AM",description:"I have been a student at BU for 2 years now and life is not what I was expecting when I committed. Here are all the things I wish I'd known before coming to BU.",length:"3 min read",image:"/images/life-at-boston-university.jpg",alt:"Boston University"};export{t as attributes};
