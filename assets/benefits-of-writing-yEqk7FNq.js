@@ -1,5 +1,5 @@
 const e=`---\r
-title: "My Second Brain"\r
+title: "Benefits of Writing"\r
 writedate: "10/24/2024"\r
 timestamp: "2:41 PM"\r
 description: "If you are able to use and organize system of notebooks effectively, they become an extension of your brain. That comes with serious productivity increases, mental fortitude, and peace."\r
