@@ -87,7 +87,7 @@ export default function Home() {
 
     const timerId = setInterval(() => {
       setTimeLeft((prevTime) => prevTime - 1);
-    }, 10);
+    }, 5);
 
     return () => clearInterval(timerId);
   }, [onTimeout]);
