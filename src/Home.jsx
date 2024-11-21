@@ -22,12 +22,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "../node_modules/swiper/swiper-bundle.min.css";
 import { Autoplay } from 'swiper/modules';
 
-// social logos
-import githubLogo from '/images/githubLogo2.svg'
-import linkedinLogo from '/images/linkedinLogo.svg'
-import xLogo from '/images/xLogo.svg'
-import instagramLogo from '/images/instagramLogo.svg'
-
 function generateRandomString(length) {
   const characters = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+}{][/<>';
   let result = '';
@@ -132,23 +126,12 @@ export default function Home() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log(location);
-    if (location.hash === '#contact') {
-      location.hash = '';
-      console.log('scrolling');
-      setTimeout(() => {
-        const contactElement = document.getElementById('Contact');
-        contactElement.scrollIntoView({ behavior: 'smooth', block: "center", inline: "center" });
-        navigate(window.location.pathname, { replace: true });
-      }, 100);
-    }
-
     const interval = setInterval(() => {
       createSnowflake();
     }, 150);
 
     return () => clearInterval(interval);
-  }, [location]);
+  }, []);
   
   return (
     <>  
@@ -226,31 +209,6 @@ export default function Home() {
           </Swiper>
           <div className="fade-overlay fade-left"></div>
           <div className="fade-overlay fade-right"></div>
-        </div>
-        <div id='Contact' className="contact">
-          <div className="contacts">
-            <div className="head">
-              <h2>Contact</h2>
-              <p>Want to chat? Feel free to reach out for any reason, besides spam...</p>
-            </div>
-            <div className="contactContainer">
-              <p>travisf@bu.edu</p>
-              <p>&#40;203&#41; 610-5471</p>
-            </div>
-          </div>
-          <div className="links">
-            <div className="head">
-              <h2>Links</h2>
-            </div>
-            <div className="linkContainer">
-              <ul>
-                <li><a target="_blank" href="https://github.com/falktravis"><img src={githubLogo} alt="Git Hub" /></a></li>
-                <li><a target="_blank" href="https://x.com/falktravis12"><img src={xLogo} alt="X" /></a></li>
-                <li><a target="_blank" href="https://www.linkedin.com/in/travis-falk/"><img src={linkedinLogo} alt="LinkedIn" /></a></li>
-                <li><a target="_blank" href="https://www.instagram.com/falk.travis18/"><img src={instagramLogo} alt="Instagram" /></a></li>
-              </ul>
-            </div>
-          </div>
         </div>
       </main>
     </>

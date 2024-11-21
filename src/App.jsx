@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom';
 import './styles/App.scss'
 import NavBar from './NavBar'
@@ -7,6 +6,7 @@ import BlogHome from './BlogHome'
 import Portfolio from './Portfolio'
 import BlogPost from './BlogPost'
 import ReadingList from './ReadingList'
+import Footer from './Footer'
 
 // Google Analytics
 import ReactGA from 'react-ga4';
@@ -25,6 +25,7 @@ function App() {
         <Route path="/blog/:category" element={<BlogHome />} />
         <Route path="/blog/:category/:slug" element={<BlogPost />} />
       </Routes>
+      <Footer />
     </>
   )
 }

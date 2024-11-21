@@ -15,6 +15,11 @@ export default function NavBar() {
     }
   }, [location]);
 
+  const contactScroll = () => {
+    const contactElement = document.getElementById('Contact');
+    contactElement.scrollIntoView({ behavior: 'smooth', block: "center", inline: "center" });
+  }
+
   return (
     <>
         <nav className={`NavBar home${isHome}`}>
@@ -22,7 +27,7 @@ export default function NavBar() {
             <ul>
                 <li><Link to='/blog'>Blog</Link></li>
                 <li><Link to='/portfolio'>Portfolio</Link></li>
-                <li><a id='contactButton' href='/#contact'>Contact</a></li>
+                <li><button onClick={contactScroll}>Contact</button></li>
             </ul>
         </nav>
     </>

@@ -5,6 +5,11 @@ import { Link } from 'react-router-dom'
 export default function ReadingList() {
     const books = [
         {
+            title: 'Steve Jobs',
+            author: 'Walter Isaacson',
+            blogPost: '/blog/books/steve-jobs',
+        },
+        {
             title: 'The Stand',
             author: 'Stephen King',
         },
@@ -30,24 +35,44 @@ export default function ReadingList() {
             author: 'Cal Newport',
         },
         {
-            title: 'The Charisma Myth',
-            author: 'Olivia Fox Cabane',
+            title: 'The Psychology of Money',
+            author: 'Morgan Housel',
         },
         {
-            title: 'The Truth About Crypto',
-            author: 'Ric Edelman',
+            title: 'The Charisma Myth',
+            author: 'Olivia Fox Cabane',
         },
         {
             title: 'The Lean Startup',
             author: 'Eric Ries',
         },
         {
-            title: 'The Final Empire',
-            author: 'Brandon Sanderson',
+            title: 'Getting Things Done',
+            author: 'David Allen',
         },
         {
             title: 'Facebook: The Inside Story',
             author: 'Steven Levy',
+        },
+        {
+            title: 'Benjamin Franklin: The Original American',
+            author: 'H.W. Brands',
+        },
+        {
+            title: 'The Final Empire',
+            author: 'Brandon Sanderson',
+        },
+        {
+            title: 'The 21 Irrefutable Laws of Leadership',
+            author: 'John Maxwell',
+        },
+        {
+            title: 'The Truth About Crypto',
+            author: 'Ric Edelman',
+        },
+        {
+            title: 'Ready Player One',
+            author: 'Ernest Cline',
         },
         {
             title: 'Zero to One',
@@ -62,6 +87,14 @@ export default function ReadingList() {
             author: 'Dale Carnegie',
         },
         {
+            title: 'Ready player two',
+            author: 'Ernest Cline',
+        },
+        {
+            title: 'Rich Dad Poor Dad',
+            author: 'Robert Kiyosaki',
+        },
+        {
             title: 'Shadow and Bone',
             author: 'Leigh Bardugo',
         },
@@ -72,6 +105,10 @@ export default function ReadingList() {
         {
             title: 'The Four Hour Work Week',
             author: 'Tim Ferriss',
+        },
+        {
+            title: 'Auto-Biography of Benjamin Franklin',
+            author: 'Benjamin Franklin',
         },
         {
             title: 'Titan',

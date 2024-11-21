@@ -58,24 +58,6 @@
             padding: 2vh 2.5%;
         }
 
-        > div:nth-child(1) {
-            h2,p {
-                color: #FFD700; // Replace with the color for the second div
-            }
-        }
-
-        > div:nth-child(2) {
-            h2,p {
-                color: #b1b1b1; // Replace with the color for the second div
-            }
-        }
-        
-        > div:nth-child(3) {
-            h2,p {
-                color: #b08d57; // Replace with the color for the third div
-            }
-        }
-
         &>div{
             background-color: main.$background2;
             border-radius: 15px;
@@ -103,7 +85,6 @@
                     color: main.$highlight;
                     padding: 0 2vw;
                     transition: 100ms ease-in-out;
-                    text-decoration: underline;
                     white-space: nowrap;
                     
                     &:hover{

@@ -1,0 +1,113 @@
+@use 'main';
+
+footer{
+    width: 100%;
+    height: 10vh;
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid main.$background2;
+
+    .pages{
+        width: 20%;
+
+        ul{
+            width: 100%;
+            height: 100%;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+    }
+    
+    .contacts{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        
+        &>p{
+            font-size: calc(14px + 0.390625vw);
+            font-family: inter, sans-serif;
+            color: main.$primary;
+
+            @media (max-width: 768px) {
+                font-size: calc(12px + 0.390625vw);
+            }
+            @media (max-width: 600px) {
+                font-size: calc(14px + 0.390625vw);
+                padding-bottom: 3vh;
+            }
+        }
+    }
+
+    .links{
+        width: 20%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        ul{
+            width: 60%;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+
+            li{
+                width: 15%;
+                a{
+
+                    img{
+                        transition: 100ms ease-in-out;
+                        width: 100%;
+                    }
+
+                    &:hover{
+
+                        img{
+                            transform: scale(1.1);
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1200px){
+        .pages{
+            width: 30%;
+        }
+        
+        .contacts{
+            width: 40%;
+        }
+
+        .links{
+            width: 30%;
+        }
+    }
+    @media (max-width: 600px){
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        margin-top: 5vh;
+
+        .pages{
+            width: 70%;
+            padding: 2vh 0;
+        }
+        
+        .contacts{
+            width: 100%;
+        }
+
+        .links{
+            width: 65%;
+        }
+    }
+}
