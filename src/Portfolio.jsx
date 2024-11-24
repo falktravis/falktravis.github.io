@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import './styles/Portfolio.scss'
+import { Link } from 'react-router-dom'
 
 import bostonImg from '/images/boston.jpg'
 import pompImg from '/images/pomp.jpg'
@@ -38,7 +39,7 @@ export default function Portfolio() {
                   <h3>Spatula Software</h3>
                   <h4>Complex Web Scraping</h4>
                 </div>
-                <p>Spatula Software is a complex application using Node JS, Puppeteer, and MongoDB to scape, store, and serve web data. This application navigated the most advanced website in the world, finding and parsing valuable data based on user requests. Not only could it scrape data, but also manipulate browsers to send generic Facebook messages for you, although that feature was never opened to users. <br /><br /> Check out this blog post, or the experiences tab for more information.</p>
+                <p>Spatula Software is a complex application using Node JS, Puppeteer, and MongoDB to scape, store, and serve web data. This application navigated the most advanced website in the world, finding and parsing valuable data based on user requests. Not only could it scrape data, but also manipulate browsers to send generic Facebook messages for you, although that feature was never opened to users. <br /><br /> Check out <Link to="/blog/devlogs/scraping-facebook">this</Link> blog post, or the experiences tab for more information.</p>
                 <div className="buttonContainer">
                   <a className='github' target='_blank' href="https://github.com/falktravis/Spatula-Software"><img src={githubImge} alt="GitHub" />Repository</a>
                 </div>
@@ -49,7 +50,7 @@ export default function Portfolio() {
                 <h3>Personal Website</h3>
                 <h4>Check out my blog!</h4>
               </div>
-              <p>I designed and then developed this entire website from scratch with React and SCSS. In fact, I built 98% of it in only three days, including full blog functionality and animations. Speed is key, over the years I have been experiencing with the fastest ways to build projects. Check out this blog post for the full story.</p>
+              <p>I designed and then developed this entire website from scratch with React and SCSS. In fact, I built 98% of it in only three days, including full blog functionality and animations. Check out <Link to="/blog/productivity/maximum-output-development">this</Link> blog post for the full story.</p>
               <div className="buttonContainer">
                 <a className='github' target='_blank' href="https://github.com/falktravis/falktravis.github.io"><img src={githubImge} alt="GitHub" />Repository</a>
               </div>
@@ -108,6 +109,16 @@ export default function Portfolio() {
               <p>Customer facing website displaying data from my backend application in real time through MongoDB applications. Built in React with NodeJS backend. Deployed on A2 hosting with Cpannel.</p>
               <div className="buttonContainer">
                 <a className='github' target='_blank' href="https://github.com/falktravis/Spatula-Software-Web-Interface"><img src={githubImge} alt="GitHub" />Repository</a>
+              </div>
+            </div>
+            <div className="kingsFall">
+              <div className="titleContainer">
+                <h3>Kings Fall</h3>
+                <h4>3D Unity Game</h4>
+              </div>
+              <p>A 3D first person dungeon crawler created with unity. Me and a small team of friends assembled this game from scratch in unity my third year of high school. We had a custom animated and two dedicated coders, including myself.</p>
+              <div className="buttonContainer">
+                <a className='playButton' target='_blank' href="https://www.digitalhighschool.org/unity/2020/KingsFall/index.html">Play</a>
               </div>
             </div>
         </div>
