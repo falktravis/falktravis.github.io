@@ -15,7 +15,9 @@ import pythonLogo from '/images/pythonLogo.png'
 import reactLogo from '/images/reactLogo.svg'
 import sassLogo from '/images/sassLogo.svg'
 import tensorflowLogo from '/images/TensorFlowLogo.svg'
-const images = [gastbyLogo, gcpLogo, JSLogo, kerasLogo, mongoLogo, nodeLogo, puppeteerLogo, pythonLogo, reactLogo, sassLogo, tensorflowLogo];
+import unityLogo from '/images/unityLogo.svg'
+import CSharpLogo from '/images/CSharpLogo.svg'
+const images = [gastbyLogo, gcpLogo, JSLogo, kerasLogo, mongoLogo, nodeLogo, puppeteerLogo, pythonLogo, reactLogo, sassLogo, tensorflowLogo, unityLogo, CSharpLogo];
 
 // swiper stuff
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -41,41 +43,49 @@ export default function Home() {
   const [charIndex, setCharIndex] = useState(0);
   const [text, setText] = useState(generateRandomString(words[wordIndex].length));
   const [timeLeft, setTimeLeft] = useState(1);
+  const [ticker, setTicker] = useState(0);
   const [wordSwitch, setIsWordSwitch] = useState(false);
   const [flip, setFlip] = useState(false);
   const [isFirst, setIsFirst] = useState(true);
 
   const onTimeout = () => {
-    if(!flip) {
-      setCharIndex((prevIndex) => prevIndex + 1);
-    }else{
-      setCharIndex((prevIndex) => prevIndex - 1);
-    }
+    if(ticker == 0){
+      setTicker(3);
 
-    setText(words[wordIndex].substring(0, charIndex) + generateRandomString(words[wordIndex].length - charIndex));
-
-    if(charIndex >= words[wordIndex].length) {
-      setFlip(true);
-      setIsFirst(false);
-      setIsWordSwitch(true);
-      setTimeLeft(100);
-    }
-    else if(charIndex <= 0 && !isFirst) {
-      setFlip(false);
-      if(wordSwitch){
-        if(wordIndex >= words.length - 1) {
-          console.log(wordIndex)
-          setWordIndex(0);
-        }else{
-          console.log(wordIndex)
-          setWordIndex(wordIndex + 1);
-        }
-        setIsWordSwitch(false);
+      if(!flip) {
+        setCharIndex((prevIndex) => prevIndex + 1);
+      }else{
+        setCharIndex((prevIndex) => prevIndex - 1);
       }
-      setTimeLeft(6);
+  
+      setText(words[wordIndex].substring(0, charIndex) + generateRandomString(words[wordIndex].length - charIndex));
+  
+      if(charIndex >= words[wordIndex].length) {
+        setFlip(true);
+        setIsFirst(false);
+        setIsWordSwitch(true);
+        setTimeLeft(150);
+      }
+      else if(charIndex <= 0 && !isFirst) {
+        setFlip(false);
+        if(wordSwitch){
+          if(wordIndex >= words.length - 1) {
+            setWordIndex(0);
+          }else{
+            setWordIndex(wordIndex + 1);
+          }
+          setIsWordSwitch(false);
+        }
+        setTimeLeft(4);
+      }
+      else{
+        setTimeLeft(4);
+      }
     }
     else{
-      setTimeLeft(6);
+      setText(words[wordIndex].substring(0, charIndex) + generateRandomString(words[wordIndex].length - charIndex));
+      setTicker((prev) => prev - 1);
+      setTimeLeft(4);
     }
   }
 
@@ -121,9 +131,6 @@ export default function Home() {
   const handleAnimationEnd = (flakeId) => {
     setSnowflakes((prev) => prev.filter((flake) => flake.id !== flakeId));
   };
-
-  const location = useLocation();
-  const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -175,7 +182,7 @@ export default function Home() {
             <div className="head">
               <h2>About Me</h2>
             </div>
-            <p>Nice to meet you! My name is Travis Falk. I am a 19 year old product/software developer&#40;among other things&#41; living in Boston. I have been obsessed with building products and software development for years, starting my coding journey around 10 years old. This website is a collection of my previous experiences and projects, as well as my current interests and knowledge. Enjoy!</p>
+            <p>Nice to meet you! My name is Travis Falk. I am a 19 year old college student and product developer&#40;among other things&#41; living in Boston. I have been obsessed with building products for years, starting my development journey at 10 years old. This website is a collection of my previous experiences and projects, as well as my current interests and knowledge. Enjoy!</p>
           </div>
         </div>
         <div className="techStack">

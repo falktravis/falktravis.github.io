@@ -27,24 +27,11 @@ footer{
         justify-content: center;
         align-items: center;
         width: 30%;
-        
-        &>p{
-            font-size: calc(14px + 0.390625vw);
-            font-family: inter, sans-serif;
-            color: main.$primary;
-
-            @media (max-width: 768px) {
-                font-size: calc(12px + 0.390625vw);
-            }
-            @media (max-width: 600px) {
-                font-size: calc(14px + 0.390625vw);
-                padding-bottom: 3vh;
-            }
-        }
     }
 
     .links{
         width: 20%;
+        height: 100%;
         position: relative;
         display: flex;
         flex-direction: column;
@@ -53,13 +40,17 @@ footer{
 
         ul{
             width: 60%;
+            height: 100%;
             list-style: none;
             display: flex;
             justify-content: space-between;
 
             li{
                 width: 15%;
+                display: flex;
+                align-items: center;
                 a{
+                    width: 100%;
 
                     img{
                         transition: 100ms ease-in-out;
@@ -99,15 +90,17 @@ footer{
 
         .pages{
             width: 70%;
-            padding: 2vh 0;
+            padding-top: 2vh;
         }
         
         .contacts{
             width: 100%;
+            padding: 2vh 0;
         }
 
         .links{
             width: 65%;
+            padding-bottom: 2vh;
         }
     }
 }

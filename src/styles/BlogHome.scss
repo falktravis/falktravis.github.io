@@ -340,7 +340,8 @@
         }
     
         .categories{
-            width: 15%;
+            width: 14%;
+            padding-right: 1%;
     
             @media (max-width: 768px) {
                 display: none;
