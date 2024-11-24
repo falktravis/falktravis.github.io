@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import './styles/Home.scss'
 import profileImg from '/images/profile.jpg'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 //tech stack logos
 import gastbyLogo from '/images/gatsbyLogo.svg'
@@ -17,12 +17,6 @@ import sassLogo from '/images/sassLogo.svg'
 import tensorflowLogo from '/images/TensorFlowLogo.svg'
 import unityLogo from '/images/unityLogo.svg'
 import CSharpLogo from '/images/CSharpLogo.svg'
-const images = [gastbyLogo, gcpLogo, JSLogo, kerasLogo, mongoLogo, nodeLogo, puppeteerLogo, pythonLogo, reactLogo, sassLogo, tensorflowLogo, unityLogo, CSharpLogo];
-
-// swiper stuff
-import { Swiper, SwiperSlide } from "swiper/react";
-import "../node_modules/swiper/swiper-bundle.min.css";
-import { Autoplay } from 'swiper/modules';
 
 function generateRandomString(length) {
   const characters = 'abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+}{][/<>';
@@ -177,45 +171,30 @@ export default function Home() {
           </div>
         </div>
         <div className="about">
-          <img src={profileImg} alt="Profile Photo" />
+          <div className="head">
+            <p className="pre-head">
+              Why should you care?
+            </p>
+            <h2>About Me</h2>
+            <p className="sub-head">
+              Quick overview of who I am and what I do.
+            </p>
+          </div>
           <div className="aboutContent">
-            <div className="head">
-              <h2>About Me</h2>
-            </div>
             <p>Nice to meet you! My name is Travis Falk. I am a 19 year old college student and product developer&#40;among other things&#41; living in Boston. I have been obsessed with building products for years, starting my development journey at 10 years old. This website is a collection of my previous experiences and projects, as well as my current interests and knowledge. Enjoy!</p>
+            <img src={profileImg} alt="Profile Photo" />
           </div>
         </div>
         <div className="techStack">
-          <Swiper
-            modules={[Autoplay]}
-            autoplay={{
-              delay: 1000, // Time delay between auto scroll (3 seconds)
-              disableOnInteraction: false, // Keep autoplay active after user interaction
-            }}
-            spaceBetween={50}
-            slidesPerView={7}
-            loop={true} // Infinite loop
-            speed={3000}
-            breakpoints={{
-              1024: {
-                slidesPerView: 6,
-              },
-              600: {
-                slidesPerView: 4,
-              },
-              300: {
-                slidesPerView: 3,
-              },
-            }}
-          >
-            {images.map((img, index) => (
-              <SwiperSlide key={index}>
-                <img src={img} alt={`tech stack ${index}`} style={{ width: "100%" }} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          <div className="fade-overlay fade-left"></div>
-          <div className="fade-overlay fade-right"></div>
+          <div className="head">
+            <p className="pre-head">
+              What can I do?
+            </p>
+            <h2>Tech Stacks</h2>
+            <p className="sub-head">
+              Basic collection of my skills and technologies I am comfortable with
+            </p>
+          </div>
         </div>
       </main>
     </>

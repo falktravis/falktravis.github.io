@@ -19,7 +19,6 @@
     "react-ga4": "^2.1.0",
     "react-helmet": "^6.1.0",
     "react-router-dom": "^6.27.0",
-    "swiper": "^11.1.14",
     "vite-plugin-markdown": "^2.2.0"
   },
   "devDependencies": {
