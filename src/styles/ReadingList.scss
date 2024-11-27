@@ -58,7 +58,7 @@
             padding: 2vh 2.5%;
         }
 
-        &>div{
+        .infoContainer{
             background-color: main.$background2;
             border-radius: 15px;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -99,6 +99,22 @@
                 font-weight: 800;
                 text-align: center;
                 width: 10%;
+            }
+        }
+
+        .more{
+            width: 100%;
+            display: flex;
+            justify-content: right;
+    
+            button{
+                background-color: transparent;
+                padding: 2vh;
+                margin-right: 1vw;
+                border: none;
+                color: main.$primary;
+                font-size: calc(8px + 0.78125vw);
+                cursor: pointer;
             }
         }
     }

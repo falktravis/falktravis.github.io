@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState } from 'react'
 import './styles/ReadingList.scss'
 import { Link } from 'react-router-dom'
 
@@ -120,15 +120,25 @@ export default function ReadingList() {
         },
     ]
 
+    const [displayAll, setDisplayAll] = useState(false)
+
   return (
     <main className='ReadingList'>
         <header>
             <h1>Reading List</h1>
-            <p>A comprehensive list and ranking of all the books I've picked up in the last couple years.</p>
+            <p>My favorite ten books I've picked up in the last couple years.</p>
         </header>
         <section>
-            {books.map((book, index) => (
-                <div key={index}>
+            {displayAll ? books.map((book, index) => (
+                <div className='infoContainer' key={index}>
+                    <div className="info">
+                        <h2>{book.title} - {book.author}</h2>
+                        {book.blogPost ? <Link to={book.blogPost}>Blog Post</Link> : null}
+                    </div>
+                    <p>{index + 1}</p>
+                </div>
+            )) : books.slice(0, 10).map((book, index) => (
+                <div className='infoContainer' key={index}>
                     <div className="info">
                         <h2>{book.title} - {book.author}</h2>
                         {book.blogPost ? <Link to={book.blogPost}>Blog Post</Link> : null}
@@ -136,6 +146,7 @@ export default function ReadingList() {
                     <p>{index + 1}</p>
                 </div>
             ))}
+            {displayAll ? null : <div className="more"><button onClick={() => setDisplayAll(true)}>Show More</button></div>}
         </section>
     </main>
   )
