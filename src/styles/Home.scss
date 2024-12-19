@@ -396,6 +396,7 @@
 
                 .instructions{
                     display: flex;
+                    width: 100%;
                     align-items: center;
                     justify-content: center;
                     margin-bottom: 2vh;
@@ -443,7 +444,6 @@
                     }
 
                     button{
-                        width: 100%;
                         background-color: main.$background2;
                         color: main.$primary;
                         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -456,9 +456,8 @@
                         }
 
                         img{
-                            width: auto;
-                            height: 50%;
-                            object-fit: cover;
+                            width: 10vh;
+                            height: 10vh;
                         }
 
                         p{

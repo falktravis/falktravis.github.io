@@ -23,16 +23,20 @@ export default function ReadingList() {
             author: 'Conn Iggulden',
         },
         {
+            title: 'Deep Work',
+            author: 'Cal Newport',
+        },
+        {
             title: 'In The Plex',
             author: 'Steven Levy',
         },
         {
-            title: 'The Hard Thing About Hard Things',
-            author: 'Ben Horowitz',
+            title: 'Getting Things Done',
+            author: 'David Allen',
         },
         {
-            title: 'Deep Work',
-            author: 'Cal Newport',
+            title: 'The Hard Thing About Hard Things',
+            author: 'Ben Horowitz',
         },
         {
             title: 'The Psychology of Money',
@@ -43,12 +47,12 @@ export default function ReadingList() {
             author: 'Olivia Fox Cabane',
         },
         {
-            title: 'The Lean Startup',
-            author: 'Eric Ries',
+            title: 'Inspired',
+            author: 'Marty Cagan',
         },
         {
-            title: 'Getting Things Done',
-            author: 'David Allen',
+            title: 'The Lean Startup',
+            author: 'Eric Ries',
         },
         {
             title: 'Facebook: The Inside Story',
@@ -59,12 +63,16 @@ export default function ReadingList() {
             author: 'H.W. Brands',
         },
         {
-            title: 'The Final Empire',
-            author: 'Brandon Sanderson',
+            title: 'Interviewing Users',
+            author: 'Steve Portigal',
         },
         {
             title: 'The 21 Irrefutable Laws of Leadership',
             author: 'John Maxwell',
+        },
+        {
+            title: 'The Long Walk',
+            author: 'Stephen King',
         },
         {
             title: 'The Truth About Crypto',
@@ -93,10 +101,6 @@ export default function ReadingList() {
         {
             title: 'Rich Dad Poor Dad',
             author: 'Robert Kiyosaki',
-        },
-        {
-            title: 'Shadow and Bone',
-            author: 'Leigh Bardugo',
         },
         {
             title: 'The Prince',

@@ -7,11 +7,30 @@ $highlight: #bb00e3;
 *{
   margin: 0;
   padding: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
 }
 
 a{
   text-decoration: none;
   color: $primary;
+}
+
+/* Remove WebKit-specific styling for inputs, buttons, and forms */
+input,
+textarea,
+button,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
 }
 
 :root {
