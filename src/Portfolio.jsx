@@ -191,7 +191,7 @@ export default function Portfolio() {
                     <li>Innovation Pathway Resident - 1 year</li>
                     <li>Expected Date of Graduation - 2026</li>
                   </ul>
-                  <div className="gpa"><p>GPA: 3.79</p></div>
+                  <div className="gpa"><p>GPA: 3.86</p></div>
                 </div>
               </div>
             </div>
