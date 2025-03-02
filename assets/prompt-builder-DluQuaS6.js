@@ -2,7 +2,7 @@ const e=`---\r
 title: "Open Source - Modular Prompt Builder"\r
 writedate: "3/2/2025"\r
 timestamp: "10:15 AM"\r
-description: "With the continual increase of LLM quality, it is becoming imperative that everyone(developers especially) become proficient in making fast, quality prompts. This tool lets you keep a library of prompt components, then drag and drop components to build the highest quality prompts very fast."\r
+description: "With the continual increase of LLM quality, it is imperative that everyone become proficient in developing fast, quality prompts. This tool lets you keep a library of prompt components, then drag and drop components to build the highest quality prompts with ease."\r
 length: "3 min read"\r
 image: "/images/Demo.gif"\r
 alt: "Prompt Builder Demo"\r

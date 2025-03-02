@@ -2,7 +2,7 @@
 title: "Open Source - Modular Prompt Builder"
 writedate: "3/2/2025"
 timestamp: "10:15 AM"
-description: "With the continual increase of LLM quality, it is becoming imperative that everyone(developers especially) become proficient in making fast, quality prompts. This tool lets you keep a library of prompt components, then drag and drop components to build the highest quality prompts very fast."
+description: "With the continual increase of LLM quality, it is imperative that everyone become proficient in developing fast, quality prompts. This tool lets you keep a library of prompt components, then drag and drop components to build the highest quality prompts with ease."
 length: "3 min read"
 image: "/images/Demo.gif"
 alt: "Prompt Builder Demo"
