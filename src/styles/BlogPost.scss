@@ -176,6 +176,18 @@
                         padding: 1vh 0;
                     }
                 }
+
+                ul{
+                    padding: 2vh 0;
+                    list-style: disc;
+                    font-size: calc(14px + 0.390625vw);
+                    text-align: left;
+                    text-indent: 0;
+    
+                    li{
+                        padding: 0.3vh 0;
+                    }
+                }
             }
         }
     
